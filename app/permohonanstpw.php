@@ -32,8 +32,8 @@ class permohonanstpw extends Model {
 
 	protected $dates = ['waktuPengajuan'];
 
-	public function scopeAproved($query){
-		$query->where('');
+	public function scopeNotProcessed($query){
+		$query->where('status', '=', 'notProcessed');
 	}
 
 	public function waktuPengajuan($date)

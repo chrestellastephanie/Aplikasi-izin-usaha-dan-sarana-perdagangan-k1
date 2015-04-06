@@ -23,9 +23,9 @@ class Permohonaniutm extends Model {
 
 	protected $dates = ['waktuPengajuan'];
 
-	public function scopeAproved($query)
+	public function scopeNotProcessed($query)
 	{
-		$query->where('');
+		$query->where('status', '=', 'notProcessed');
 	}
 
 	public function waktuPengajuan($date)
