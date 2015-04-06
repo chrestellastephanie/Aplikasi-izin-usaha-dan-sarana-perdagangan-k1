@@ -50,17 +50,17 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 		      <ul class="menu nav navbar-nav ">
 		        <li class="active"><a href="index.html">home</a></li>
-		         <li><a href="feature.html">profil user</a></li>
-		        <!-- <li><a href="blog.html">STPW</a></li>
-		        <li><a href="about.html">ITPMB</a></li> 
+		         <li><a href="feature.html">user profile</a></li>
+		        <li><a href="blog.html">portal application</a></li>
+		        <!-- <li><a href="about.html">ITPMB</a></li> 
 		        <li><a href="contact.html">contact</a></li> -->
 		      </ul>
-		      <form class="navbar-form navbar-right" role="search">
+		      <!-- <form class="navbar-form navbar-right" role="search">
 		        <div class="form-group my_search">
 		          <input type="text" class="form-control" placeholder="Search">
 		        </div>
 		        <button type="submit" class="btn btn-default">Search</button>
-		      </form>
+		      </form> -->
 		    </div><!-- /.navbar-collapse -->
 		  </div><!-- /.container-fluid -->
 		</nav>
