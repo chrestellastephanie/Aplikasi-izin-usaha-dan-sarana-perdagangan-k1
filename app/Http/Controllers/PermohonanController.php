@@ -15,6 +15,15 @@ use App\Http\Requests\CreatePermohonanITPMBRequest;
 
 class PermohonanController extends Controller {
 
+	public function index()
+	{
+		$iutm = Permohonaniutm::latest()->NotProcessed()->get();
+		$stpw = Permohonanstpw::latest()->NotProcessed()->get();
+		$itpmb = Permohonanitpmb::latest()->NotProcessed()->get();
+
+		return view('permohonan.lihatIzin',compact('iutm','stpw','itpmb'));
+	}
+
 	public function chooseIzin()
 	{
 		return view('permohonan.pilihIzin');

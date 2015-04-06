@@ -9,7 +9,7 @@
 			{{ $mohon->namaPerusahaan }}
 		</li>
 	@endforeach
-	<ul>
+	</ul>
 	<h2>STPW</h2>
 	<ul>
 	@foreach ($stpw as $mohon)
@@ -17,7 +17,7 @@
 			{{ $mohon->namaPerusahaan }}
 		</li>
 	@endforeach
-	<ul>
+	</ul>
 	<h2>ITPMB</h2>
 	<ul>
 	@foreach ($itpmb as $mohon)
@@ -25,5 +25,5 @@
 			{{ $mohon->namaPerusahaan }}
 		</li>
 	@endforeach
-	<ul>
+	</ul>
 @endsection
