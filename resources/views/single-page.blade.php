@@ -46,8 +46,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 		      <ul class="menu nav navbar-nav ">
 		        <li class="active"><a href="index.html">home</a></li>
-		        <li><a href="feature.html">features</a></li>
-		        <li><a href="blog.html">blog</a></li>
+		        <li><a href="feature.html">IUTM/IUPP/IUPPT</a></li>
+		        <li><a href="blog.html">STPW</a></li>
 		        <li><a href="about.html">about</a></li>
 		        <li><a href="contact.html">contact</a></li>
 		      </ul>

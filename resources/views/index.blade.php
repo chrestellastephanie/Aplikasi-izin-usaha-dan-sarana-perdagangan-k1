@@ -107,12 +107,12 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					  <img src="images/icon3.png" class="img-responsive"/>
 					  <p>STPW adalah bukti pendaftaran prospektus/perjanjian yang diberikan kepada pemberi waralaba dan/atau penerima waralaba</p>
 				     <div class="rd_more1">
-						<a href="single-page.html"><button class="btn_style">Ajukan Izin</button></a>
+						<a href="permohonan/ajukan-ITPMB"><button class="btn_style">Ajukan Izin</button></a>
 					</div>	
 				</div>
 			    <div class="clearfix"></div>
 	</div>
-	<div class="row grids_btm top">
+	<!-- <div class="row grids_btm top">
 		<div class="col-md-6">
 			<div class="grid_list">
 				<div class="images_1_of_1">
@@ -137,7 +137,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				</div>
 				 <div class="clearfix"></div>
 			</div>
-	</div>
+	</div> 
 	<div class="row grids_btm top">
 		<div class="col-md-6">
 			<div class="grid_list">
@@ -163,7 +163,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				</div>
 				 <div class="clearfix"></div>
 			</div>
-	</div>
+	</div>-->
 </div>
 </div>
 <div class="footer_bg"><!-- start footre -->

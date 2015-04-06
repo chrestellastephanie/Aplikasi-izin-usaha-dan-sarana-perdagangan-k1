@@ -25,7 +25,9 @@ class permohonanstpw extends Model {
 		'kewajibanPenerima',
 		'wilayahUsaha',
 		'jangkaWaktu',
-		'jumlahTempatUsaha',	
+		'jumlahTempatUsaha',
+		'waktuPengajuan',
+		'status',	
 	];
 
 	protected $dates = ['waktuPengajuan'];
