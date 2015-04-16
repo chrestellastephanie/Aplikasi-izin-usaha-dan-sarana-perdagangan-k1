@@ -47,6 +47,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		      <ul class="menu nav navbar-nav ">
 		        <li><a href="../permohonan">home</a></li>
 		         <li><a href="#">user profile</a></li>
+		         <li><a href="#">contact us</a></li>
 		        <li><a href="#">portal application</a></li>
 		      </ul>
 		      <!-- <form class="navbar-form navbar-right" role="search">

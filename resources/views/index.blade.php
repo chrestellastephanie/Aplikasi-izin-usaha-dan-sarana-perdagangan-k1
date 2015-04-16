@@ -7,6 +7,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!DOCTYPE HTML>
 <html>
 <head>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <title>Izin Usaha dan Sarana Perdagangan</title>
 <!-- Bootstrap -->
 <!-- <link href="css/bootstrap.min.css" rel='stylesheet' type='text/css' />
@@ -51,6 +52,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		      <ul class="menu nav navbar-nav ">
 		        <li class="active"><a href="../public/permohonan">home</a></li>
 		         <li><a href="#">user profile</a></li>
+		         <li><a href="#">contact us</a></li>
 		        <li><a href="#">portal application</a></li>
 		        <!-- <li><a href="about.html">ITPMB</a></li> 
 		        <li><a href="contact.html">contact</a></li> -->
@@ -69,7 +71,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			<div class="col-md-8">
 					<div class="col-md-10 slider_text">
 						<h2>Aplikasi Izin Usaha dan Sarana Perdagangan</h2>
-						<h3>Kota Bandung</h3>
+						<h3>Kota Bandung</h3><br>
+						<a href="#pilihanIzin"><button class="btn_style">Ajukan Izin</button></a>
 					</div>
 				</div>
 				<div class="col-md-4">
@@ -82,7 +85,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 </div>
 <div class="main"><!-- start main -->
 <div class="container main">
-	<div class="row grids_of_3">
+	<div class="row grids_of_3" id="pilihanIzin">
 				<div class="col-md-4 grid1_of_3">
 					  <h2>Toko Modern,
 					  	<br>Pusat Perbelanjaan,
@@ -233,5 +236,21 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		</div>
 	</div>
 </div>
+<script>
+	$(function() {
+	  $('a[href*=#]:not([href=#])').click(function() {
+	    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+	      var target = $(this.hash);
+	      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+	      if (target.length) {
+	        $('html,body').animate({
+	          scrollTop: target.offset().top
+	        }, 1000);
+	        return false;
+	      }
+	    }
+	  });
+	});
+</script>
 </body>
 </html>

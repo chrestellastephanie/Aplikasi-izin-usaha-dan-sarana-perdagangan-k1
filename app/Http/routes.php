@@ -19,14 +19,17 @@ Route::controllers([
 	'auth' => 'Auth\AuthController',
 	'password' => 'Auth\PasswordController',
 ]);
+// user
 Route::get('permohonan','PermohonanController@chooseIzin');
 Route::get('permohonan/ajukan-IUTM-IUPP-IUPPT','PermohonanController@show_IUTM_IUPP_IUPPT');
 Route::get('permohonan/ajukan-STPW','PermohonanController@show_STPW');
 Route::get('permohonan/ajukan-ITPMB','PermohonanController@show_ITPMB');
-Route::get('permohonan/view','PermohonanController@index');
-
 
 Route::post('permohonan/IUTMSuccess','PermohonanController@ajukan_IUTM_IUPP_IUPPT');
 Route::post('permohonan/STPWSuccess','PermohonanController@ajukan_STPW');
 Route::post('permohonan/ITPMBSuccess','PermohonanController@ajukan_ITPMB');
 
+Route::get('user-profile','UserProfileController@index');
+
+// dinas
+Route::get('permohonan/view','PermohonanController@index');
