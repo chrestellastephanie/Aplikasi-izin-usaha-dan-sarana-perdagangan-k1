@@ -6,7 +6,6 @@
 	<hr/>
 	
 	{!! Form::open(['url' => 'permohonan/ITPMBSuccess','files' => true]) !!}
-	<input type="hidden" name="_token" value="{{{ csrf_token() }}}" />
 	<div class="form-horizontal">
 
 		@include('errors.list')

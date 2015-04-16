@@ -8,7 +8,6 @@
 	@include('errors.list')
 
 	{!! Form::open(['url' => 'permohonan/STPWSuccess','files' => true]) !!}
-	<input type="hidden" name="_token" value="{{{ csrf_token() }}}" />
 	<div class="form-horizontal">
 		<h4>Data perusahaan</h4>
 		</hr>
