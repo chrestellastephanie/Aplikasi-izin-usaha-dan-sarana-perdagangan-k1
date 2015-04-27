@@ -20,7 +20,7 @@ Route::controllers([
 	'password' => 'Auth\PasswordController',
 ]);
 // user
-Route::get('permohonan','PermohonanController@chooseIzin');
+Route::get('/','PermohonanController@chooseIzin');
 Route::get('permohonan/ajukan-IUTM-IUPP-IUPPT','PermohonanController@show_IUTM_IUPP_IUPPT');
 Route::get('permohonan/ajukan-STPW','PermohonanController@show_STPW');
 Route::get('permohonan/ajukan-ITPMB','PermohonanController@show_ITPMB');
@@ -31,5 +31,19 @@ Route::post('permohonan/ITPMBSuccess','PermohonanController@ajukan_ITPMB');
 
 Route::get('user-profile','UserProfileController@index');
 
+
 // dinas
-Route::get('permohonan/view','PermohonanController@index');
+Route::get('admin','SiteController@indexAdminView');
+Route::get('admin/permohonan/view','PermohonanController@index');
+// Route::get('admin/permohonan/berkasIUTM','PermohonanController@berkasIUTMView');
+Route::get('admin/permohonan/berkasIUTM/{id}','SiteController@showBerkasIUTM');
+Route::get('admin/permohonan/berkasSTPW/{id}','SiteController@showBerkasSTPW');
+Route::get('admin/permohonan/berkasITPMB/{id}','SiteController@showBerkasITPMB');
+
+Route::post('admin/setujuIUTM','PermohonanController@setujuIUTM');
+Route::post('admin/setujuSTPW','PermohonanController@setujuSTPW');
+Route::post('admin/setujuITPMB','PermohonanController@setujuITPMB');
+
+Route::post('admin/tolakIUTM','PermohonanController@tolakIUTM');
+Route::post('admin/tolakSTPW','PermohonanController@tolakSTPW');
+Route::post('admin/tolakITPMB','PermohonanController@tolakITPMB');

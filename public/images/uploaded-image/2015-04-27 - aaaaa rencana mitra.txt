@@ -1,0 +1,33 @@
+hasil wawancara
+
+alur sistem saat ini secara umum
+
+1 proses barang rusak datang:
+	barang rusak dikirim oleh pihak client. lalu diterima oleh bagian administrasi service. bagian administrasi kemudian melakukan pencatatan barang yang datang. barang diberi no seri yang unik (biasanya pake tanggal dan nama klien). pencatatan dilakukan di buku customer, yang berisi tanggal datang barang, no seri barang, no surat jalan, tanggal barang selesai dikerjakan, tanggal pengiriman barang yang sudah selesai dan komponen-komponen yang digunakan untuk perbaikan.
+
+2 proses perbaikan barang
+	barang yang rusak diambil satu persatu oleh teknisi yang available oleh teknisi itu sendiri. selama melakukan proses perbaikan, teknisi melakukan pencatatan komponen yang digunakan di kertas yang sudah disediakan perusahaan. poin-poin yang dicatat di kertas tersebut antara lain: tanggal perbaikan, nama barang yang digunakan, jumlah barang, dan nama teknisi. barang yang sudah selesai dikembalikan ke bagian administrasi untuk dikirim kembali ke client
+
+3 pembuatan tagihan
+	barang yang sudah selesai diperbaiki dibuatkan tagihannya oleh bagian administrasi. bagian admin membuat tagihan berdasarkan list barang yang ditulis oleh teknisi. pembuatan masih dilakukan secara manual dengan microsoft excel. Admin mengetik nama barang yang tertulis pada list dari teknisi dan harga barang dicari secara manual dari database pada file microsoft excel lainnya. pembuatan tagihan biasanya dilakukan sebulan sekali untuk masing-masing customer
+
+
+
+permasalahan
+- pembuatan tagihan tidak efisien
+- kemungkinan adanya barang yang tidak tertagih karena tidak tercatat
+- kemungkinan terjadinya barang hilang karena teknisi mengambil sendiri barangnya dan melakukan pencatatan. ada celah untuk teknisi melakukan kecurangan
+- data barang yang ga konsisten dengan keadaan sebenarnya
+
+
+harapan
+- ada yang buat ngasih tau kalo barang udh abis
+- tagihan ga dibuat manual lagi
+- nama teknisi yang ambil barang bisa tercatat
+- setiap perubahan pada basis data ada lognya.
+- dapat melakukan pemantauan keluar dan masuk barang
+
+
+waktu/performance
+- lamanya waktu perbaikan barang tergantung dari tingkat kerusakan/kesulitan barang
+- waktu yang dibutuhkan admin untuk membuat tagihan 1 barang kurang lebih setengah jam

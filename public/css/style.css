@@ -673,8 +673,27 @@ body {
 	padding-bottom: 3%;
 	overflow: hidden;
 }
-
-
+.topmargin{
+	margin-top: 3%;
+	margin-bottom: 3%;
+}
+.panelNew{
+	padding: 3%;
+	width: 50%;
+	margin-left: auto;
+	margin-right: auto;
+}
+.panelNew button{
+	margin-top: 3%;
+	margin-left: 40%;
+}
+.contentSize{
+	font-size: 13px;
+	margin-bottom: 2%;
+}
+.buttonSetuju{
+	background-color: #12B844;
+}
 
 
 

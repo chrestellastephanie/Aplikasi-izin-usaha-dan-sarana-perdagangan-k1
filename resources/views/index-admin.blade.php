@@ -7,8 +7,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!DOCTYPE HTML>
 <html>
 <head>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <title>Izin Usaha dan Sarana Perdagangan</title>
 <!-- Bootstrap -->
+<!-- <link href="css/bootstrap.min.css" rel='stylesheet' type='text/css' />
+<link href="css/bootstrap.css" rel='stylesheet' type='text/css' /> -->
 <link href="{{ asset('/css/bootstrap.min.css') }}" rel="stylesheet">
 <link href="{{ asset('/css/bootstrap.css') }}" rel="stylesheet">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -21,10 +24,12 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
 <!-- // webfonts  -->
 <link href="{{ asset('/css/style.css') }}" rel="stylesheet">
+<!-- <link href="css/style.css" rel="stylesheet" type="text/css" media="all" /> -->
 <!-- start plugins -->
 <script type="text/javascript" src="js/jquery.min.js"></script>
 <script type="text/javascript" src="js/bootstrap.js"></script>
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
+
 </head>
 <body>
 <div class="header_bg"><!-- start header -->
@@ -45,10 +50,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		    <!-- Collect the nav links, forms, and other content for toggling -->
 		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 		      <ul class="menu nav navbar-nav ">
-		        <li><a href="../permohonan">home</a></li>
-		         <li><a href="#">user profile</a></li>
 		         <li><a href="#">about us</a></li>
-		        <li><a href="#">portal application</a></li>
+		        <li><a href="/">portal application</a></li>
+		        <!-- <li><a href="about.html">ITPMB</a></li> 
+		        <li><a href="contact.html">contact</a></li> -->
 		      </ul>
 		      <!-- <form class="navbar-form navbar-right" role="search">
 		        <div class="form-group my_search">
@@ -60,15 +65,47 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		  </div><!-- /.container-fluid -->
 		</nav>
 		</div>
-		<ol class="breadcrumb">
-		  <li><a href="index.html">Home</a></li>
-		  <li class="active">Form</li>
-		</ol>
+		<div class="row slider text-center">
+			<div class="col-md-8">
+					<div class="col-md-10 slider_text">
+						<h2>Aplikasi Izin Usaha dan Sarana Perdagangan</h2>
+						<h3>Admin Mode</h3><br>
+						<a href="#loginForm"><button class="btn_style">Login</button></a>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="slider_img">
+						<img src="images/pic1.png" alt="" class="img-responsive"/>
+					</div>
+				</div>
+			</div>
 	</div>
 </div>
 <div class="main"><!-- start main -->
-<div class="container">
-	@yield('content')
+<div class="container main" id="loginForm">
+	<div class="topmargin">
+		<h2>Login</h2><br><br>
+		<div class="panel panelNew panel-default">
+			<form id="loginAdmin">
+				<input type="hidden" name="_token" value="{{ csrf_token() }}">
+				<table style="width:100%;">
+					<tr>
+						<td style="width:10%;"><h5>Username</h5></td>
+						<td style="width:70%;"><input name="username" type="text" class="form-control"></td>
+					</tr>
+					<tr>
+						<td style="width:30%;"><h5>Password</h5></td>
+						<td style="width:70%;"><input name="username" type="password" class="form-control"></td>
+					</tr>
+				</table>
+				<button class="btn btn-default">login</button>
+			</form>
+		</div>
+	</div>
+	
+
+
+
 </div>
 </div>
 <div class="footer_bg"><!-- start footre -->
@@ -138,5 +175,21 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		</div>
 	</div>
 </div>
+<script>
+	$(function() {
+	  $('a[href*=#]:not([href=#])').click(function() {
+	    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+	      var target = $(this.hash);
+	      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+	      if (target.length) {
+	        $('html,body').animate({
+	          scrollTop: target.offset().top
+	        }, 1000);
+	        return false;
+	      }
+	    }
+	  });
+	});
+</script>
 </body>
 </html>
