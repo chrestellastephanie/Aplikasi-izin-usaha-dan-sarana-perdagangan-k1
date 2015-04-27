@@ -52,6 +52,17 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		      <ul class="menu nav navbar-nav ">
 		         <li><a href="#">about us</a></li>
 		        <li><a href="/">portal application</a></li>
+		        @if (Auth::guest())
+					<li><a href="{{ url('/auth/login') }}">Login</a></li>
+					<li><a href="{{ url('/auth/register') }}">Register</a></li>
+				@else
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">{{ Auth::user()->name }} <span class="caret"></span></a>
+						<ul class="dropdown-menu" role="menu">
+							<li><a href="{{ url('/auth/logout') }}">Logout</a></li>
+						</ul>
+					</li>
+				@endif
 		        <!-- <li><a href="about.html">ITPMB</a></li> 
 		        <li><a href="contact.html">contact</a></li> -->
 		      </ul>
@@ -82,7 +93,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	</div>
 </div>
 <div class="main"><!-- start main -->
-<div class="container main" id="loginForm">
+<!-- <div class="container main" id="loginForm">
 	<div class="topmargin">
 		<h2>Login</h2><br><br>
 		<div class="panel panelNew panel-default">
@@ -106,7 +117,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
 
 
-</div>
+</div> -->
+@yield('content')
 </div>
 <div class="footer_bg"><!-- start footre -->
 	<div class="container">

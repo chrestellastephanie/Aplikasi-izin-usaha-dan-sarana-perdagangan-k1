@@ -17,6 +17,11 @@ use App\Http\Requests\CreatePermohonanITPMBRequest;
 
 class PermohonanController extends Controller {
 
+	public function __construct()
+	{
+		$this->middleware('auth',['only'=>'index']);
+	}
+
 	public function index()
 	{
 		$iutm = Permohonaniutm::latest()->NotProcessed()->get();

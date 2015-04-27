@@ -8,6 +8,10 @@ use App\database;
 use Illuminate\Http\Request;
 
 class SiteController extends Controller {
+	public function __construct()
+	{
+		$this->middleware('auth');
+	}
 
 	public function indexAdminView(){
 		return view('index-admin');
