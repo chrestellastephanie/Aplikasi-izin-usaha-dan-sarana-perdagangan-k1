@@ -45,9 +45,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		    <!-- Collect the nav links, forms, and other content for toggling -->
 		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 		      <ul class="menu nav navbar-nav ">
-		        <li><a href="../permohonan">home</a></li>
-		         <li><a href="#">permohonan</a></li>
-		        {{--<li><a href="#">portal application</a></li>--}}
+		        {{--<li><a href="../permohonan">home</a></li>--}}
+		         <li><a href="/admin/permohonan/view">permohonan</a></li>
+		        <li><a href="#">logout</a></li>
 		      </ul>
 		      <!-- <form class="navbar-form navbar-right" role="search">
 		        <div class="form-group my_search">

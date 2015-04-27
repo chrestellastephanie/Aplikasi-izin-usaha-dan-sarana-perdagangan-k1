@@ -7,7 +7,7 @@
 	@foreach ($iutm as $mohon)
 		<div class="panel panel-default">
 			<div class="panel-body">
-				<div class="col-md-8">
+				<div class="col-md-9">
 					<li>
 						<h4>{{ $mohon->namaPerusahaan }}</h4>
 					</li>
@@ -15,13 +15,8 @@
 						{{ $mohon->waktuPengajuan }}
 					</li>
 				</div>
-				<div class="col-md-4">
-					<a href="berkasIUTM/{{$mohon->id}}"><button class="btn2 btn_style">cek berkas</button></a> |
-					<select>
-						<option>Accept</option>
-						<option>Decline</option>
-					</select>
-					<button class="btn2 btn_style">ubah status</button>
+				<div class="col-md-3">
+					<a href="berkasIUTM/{{$mohon->id}}"><button class="btn2 btn_style">cek berkas</button></a>					
 				</div>
 			</div>
 		</div>
@@ -32,7 +27,7 @@
 	@foreach ($stpw as $mohon)
 		<div class="panel panel-default">
 			<div class="panel-body">
-				<div class="col-md-8">
+				<div class="col-md-9">
 					<li>
 						<h4>{{ $mohon->namaPerusahaan }}</h4>
 					</li>
@@ -40,13 +35,8 @@
 						{{ $mohon->waktuPengajuan }}
 					</li>
 				</div>
-				<div class="col-md-4">
-					<a href="berkasSTPW/{{$mohon->id}}"><button class="btn2 btn_style">cek berkas</button></a> |
-					<select>
-						<option>Accept</option>
-						<option>Decline</option>
-					</select>
-					<button class="btn2 btn_style">ubah status</button>
+				<div class="col-md-3">
+					<a href="berkasSTPW/{{$mohon->id}}"><button class="btn2 btn_style">cek berkas</button></a>
 				</div>
 			</div>
 		</div>
@@ -57,7 +47,7 @@
 	@foreach ($itpmb as $mohon)
 		<div class="panel panel-default">
 			<div class="panel-body">
-				<div class="col-md-8">
+				<div class="col-md-9">
 					<li>
 						<h4>{{ $mohon->namaPerusahaan }}</h4>
 					</li>
@@ -65,13 +55,8 @@
 						{{ $mohon->waktuPengajuan }}
 					</li>
 				</div>
-				<div class="col-md-4">
-					<a href="berkasITPMB/{{$mohon->id}}"><button class="btn2 btn_style">cek berkas</button></a> |
-					<select>
-						<option>Accept</option>
-						<option>Decline</option>
-					</select>
-					<button class="btn2 btn_style">ubah status</button>
+				<div class="col-md-3">
+					<a href="berkasITPMB/{{$mohon->id}}"><button class="btn2 btn_style">cek berkas</button></a>
 				</div>
 			</div>
 		</div>

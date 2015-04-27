@@ -687,7 +687,13 @@ body {
 	margin-top: 3%;
 	margin-left: 40%;
 }
-
+.contentSize{
+	font-size: 13px;
+	margin-bottom: 2%;
+}
+.buttonSetuju{
+	background-color: #12B844;
+}
 
 
 

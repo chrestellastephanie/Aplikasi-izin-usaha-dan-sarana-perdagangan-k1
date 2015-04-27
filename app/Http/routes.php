@@ -35,6 +35,15 @@ Route::get('user-profile','UserProfileController@index');
 // dinas
 Route::get('admin','SiteController@indexAdminView');
 Route::get('admin/permohonan/view','PermohonanController@index');
-Route::get('admin/permohonan/berkas','PermohonanController@berkasView');
-Route::get('berkasSTPW/{id}','SiteController@showBerkas');
+// Route::get('admin/permohonan/berkasIUTM','PermohonanController@berkasIUTMView');
+Route::get('admin/permohonan/berkasIUTM/{id}','SiteController@showBerkasIUTM');
+Route::get('admin/permohonan/berkasSTPW/{id}','SiteController@showBerkasSTPW');
+Route::get('admin/permohonan/berkasITPMB/{id}','SiteController@showBerkasITPMB');
 
+Route::post('admin/setujuIUTM','PermohonanController@setujuIUTM');
+Route::post('admin/setujuSTPW','PermohonanController@setujuSTPW');
+Route::post('admin/setujuITPMB','PermohonanController@setujuITPMB');
+
+Route::post('admin/tolakIUTM','PermohonanController@tolakIUTM');
+Route::post('admin/tolakSTPW','PermohonanController@tolakSTPW');
+Route::post('admin/tolakITPMB','PermohonanController@tolakITPMB');
