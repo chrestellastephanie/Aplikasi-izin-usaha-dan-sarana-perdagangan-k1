@@ -46,9 +46,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 		      <ul class="menu nav navbar-nav ">
 		        <li><a href="../permohonan">home</a></li>
-		         <li><a href="#">user profile</a></li>
-		         <li><a href="#">about us</a></li>
-		        <li><a href="#">portal application</a></li>
+		         <li><a href="#">permohonan</a></li>
+		        {{--<li><a href="#">portal application</a></li>--}}
 		      </ul>
 		      <!-- <form class="navbar-form navbar-right" role="search">
 		        <div class="form-group my_search">

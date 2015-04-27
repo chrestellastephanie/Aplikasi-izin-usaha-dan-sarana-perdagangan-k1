@@ -1,4 +1,4 @@
-@extends('single-page')
+@extends('page-admin')
 
 @section('content')
 	<h1>Daftar permohonan : </h1>
@@ -16,7 +16,7 @@
 					</li>
 				</div>
 				<div class="col-md-4">
-					<button class="btn2 btn_style">cek berkas</button> |
+					<a href="berkasIUTM/{{$mohon->id}}"><button class="btn2 btn_style">cek berkas</button></a> |
 					<select>
 						<option>Accept</option>
 						<option>Decline</option>
@@ -41,7 +41,7 @@
 					</li>
 				</div>
 				<div class="col-md-4">
-					<button class="btn2 btn_style">cek berkas</button> |
+					<a href="berkasSTPW/{{$mohon->id}}"><button class="btn2 btn_style">cek berkas</button></a> |
 					<select>
 						<option>Accept</option>
 						<option>Decline</option>
@@ -66,7 +66,7 @@
 					</li>
 				</div>
 				<div class="col-md-4">
-					<button class="btn2 btn_style">cek berkas</button> |
+					<a href="berkasITPMB/{{$mohon->id}}"><button class="btn2 btn_style">cek berkas</button></a> |
 					<select>
 						<option>Accept</option>
 						<option>Decline</option>

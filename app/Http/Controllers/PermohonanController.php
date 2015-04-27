@@ -115,5 +115,8 @@ class PermohonanController extends Controller {
 
 		return redirect('permohonan');
 	}
+	public function berkasView(){
+		return view ('berkas');
+	}
 
 }
