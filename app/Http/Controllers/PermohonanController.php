@@ -132,6 +132,23 @@ class PermohonanController extends Controller {
 		database::changeStatusIUTM($id,$status, $tgl);
 		return redirect('admin/permohonan/view');
 	}
+
+	public function sendMail($email, $status) //$name, $email, $id_permohonan, $status)
+	{
+		$isi_email = '';
+		if ($status == 'accepted'){
+			$isi_email = 'Yang terhormat, warga kota Bandung. Selamat, permohonan izin usaha anda dengan id : 001 telah diterima. Silahkan ambil surat izin anda di dinas blablabla Jalan lalalala, dengan membawa hasil print SKRD yang berada di lampiran email ini sebagai. Sebelum anda mengambil surat izin, anda perlu membayar retribusi sesuai dengan perda blablabla di loket No.XX dengan menggunakan SKRD yang telah anda print. Terima Kasih' ;
+		} else {
+			$isi_email = 'Mohon maaf, permohonan izin usaha anda dengan id : 001 telah ditolak, dikarenakan tidak memenuhi ketentuan permohonan izin usaha. Terima Kasih' ;
+		}
+
+		// kirim email
+		Mail::raw($isi_email, function($message) {
+    		$message->from('coderbodoh@gmail.com', 'Dinas Izin Usaha Kota Bandung');
+ 	   		$message->to($email);
+		} );
+	}
+
 	public static function setujuSTPW(){
 		$id = Input::get('id');
 		$status = 'accepted';
@@ -168,6 +185,4 @@ class PermohonanController extends Controller {
 		database::changeStatusITPMB($id,$status, $tgl);
 		return redirect('admin/permohonan/view');
 	}
-
-
 }

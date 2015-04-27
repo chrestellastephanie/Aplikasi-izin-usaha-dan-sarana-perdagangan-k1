@@ -54,7 +54,7 @@ return [
 	|
 	*/
 
-	'from' => ['address' => 'dinasizinusaha@gmail.com', 'name' => 'Dinas Izin Usaha'],
+	'from' => ['address' => 'coderbodoh@gmail.com', 'name' => 'Coder Bodoh'],
 
 	/*
 	|--------------------------------------------------------------------------
@@ -80,7 +80,7 @@ return [
 	|
 	*/
 
-	'username' => env('dinasizinusaha'),
+	'username' => env('MAIL_USERNAME'),
 
 	/*
 	|--------------------------------------------------------------------------
@@ -93,7 +93,7 @@ return [
 	|
 	*/
 
-	'password' => env('dinasizinusahaadmin'),
+	'password' => env('MAIL_PASSWORD'),
 
 	/*
 	|--------------------------------------------------------------------------
