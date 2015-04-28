@@ -51,7 +51,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 		      <ul class="menu nav navbar-nav ">
 		        <li class="active"><a href="../public/permohonan">home</a></li>
-		         <li><a href="#">user profile</a></li>
+		         <li><a href="/user-profile">user profile</a></li>
 		         <li><a href="#">about us</a></li>
 		        <li><a href="#">portal application</a></li>
 		        <!-- <li><a href="about.html">ITPMB</a></li> 

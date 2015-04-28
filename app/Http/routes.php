@@ -40,7 +40,8 @@ Route::get('admin/permohonan/berkasIUTM/{id}','SiteController@showBerkasIUTM');
 Route::get('admin/permohonan/berkasSTPW/{id}','SiteController@showBerkasSTPW');
 Route::get('admin/permohonan/berkasITPMB/{id}','SiteController@showBerkasITPMB');
 
-Route::post('admin/setujuIUTM','PermohonanController@setujuIUTM');
+Route::post('admin/setujuIUTM','PermohonanController@setujuIUTM'); //ubah status aja
+Route::post('admin/setujuIUTM','PermohonanController@setujuIUTM'); //bikin pdf
 Route::post('admin/setujuSTPW','PermohonanController@setujuSTPW');
 Route::post('admin/setujuITPMB','PermohonanController@setujuITPMB');
 

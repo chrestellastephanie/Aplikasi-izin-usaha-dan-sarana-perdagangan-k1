@@ -9,6 +9,8 @@ use App\database;
 use Request;
 use Input;
 use Carbon\Carbon;
+use App\Http\PDF;
+use Barryvdh\DomPDF\Facade;
 use App\Http\Requests\CreatePermohonanIUTMRequest;
 use App\Http\Requests\CreatePermohonanSTPWRequest;
 use App\Http\Requests\CreatePermohonanITPMBRequest;
@@ -130,7 +132,12 @@ class PermohonanController extends Controller {
 		$status = 'accepted';
 		$tgl = Carbon::now();
 		database::changeStatusIUTM($id,$status, $tgl);
-		return redirect('admin/permohonan/view');
+		
+		// $iutm = database::getPermohonanIUTMbyId($id);
+		// $pdf = \PDF::loadView('surat-izin-iutm',compact('iutm'));
+        // return $pdf->stream("tes.pdf"); //kasih nama sesuai no izinnya -> ntar diganti sama save pdf nya aja
+
+		return redirect('admin/permohonan/view'); // balik ke halaman awal
 	}
 	public static function setujuSTPW(){
 		$id = Input::get('id');
