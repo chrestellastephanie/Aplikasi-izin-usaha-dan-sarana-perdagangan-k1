@@ -28,4 +28,11 @@ class SiteController extends Controller {
 		$itpmb = database::getPermohonanITPMBbyId($id);
 		return view ('berkas-itpmb',compact('itpmb'));
 	}
+	public function showIzinIUTM($id){
+		$iutm = database::getPermohonanIUTMbyId($id);
+
+		$pdf = \PDF::loadView('surat-izin-iutm',compact('iutm'));
+        return $pdf->stream("tes.pdf"); //kasih nama sesuai no izinnya -> ntar diganti sama save pdf nya aja
+		// return view ('surat-izin-iutm',compact('iutm'));
+	}
 }

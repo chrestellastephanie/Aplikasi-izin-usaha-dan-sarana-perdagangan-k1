@@ -204,7 +204,6 @@ class PermohonanController extends Controller {
 		$iutm = database::getDisetujuiIUTM();
 		$stpw = database::getDisetujuiSTPW();
 		$itpmb = database::getDisetujuiITPMB();
-
 		return view ('izin-disetujui', compact('iutm','stpw','itpmb'));
 	}
 }

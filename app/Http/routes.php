@@ -50,3 +50,4 @@ Route::post('admin/tolakSTPW','PermohonanController@tolakSTPW');
 Route::post('admin/tolakITPMB','PermohonanController@tolakITPMB');
 
 Route::get('admin/izin','PermohonanController@showAccepted');
+Route::get('admin/izin/{id}','SiteController@showIzinIUTM');
