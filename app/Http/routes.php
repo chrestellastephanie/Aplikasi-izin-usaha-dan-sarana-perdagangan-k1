@@ -34,15 +34,15 @@ Route::get('user-profile','UserProfileController@index');
 
 // dinas
 // Route::get('admin','SiteController@indexAdminView');
-Route::get('admin/permohonan/view','PermohonanController@index');
+// Route::get('admin/permohonan/view','PermohonanController@index');
 Route::get('admin/permohonan/view/iutm','SiteController@showPermohonanIUTM');
 Route::get('admin/permohonan/view/stpw','SiteController@showPermohonanSTPW');
 Route::get('admin/permohonan/view/itpmb','SiteController@showPermohonanITPMB');
 
 // Route::get('admin/permohonan/berkasIUTM','PermohonanController@berkasIUTMView');
-Route::get('admin/permohonan/berkasIUTM/{id}','SiteController@showBerkasIUTM');
-Route::get('admin/permohonan/berkasSTPW/{id}','SiteController@showBerkasSTPW');
-Route::get('admin/permohonan/berkasITPMB/{id}','SiteController@showBerkasITPMB');
+Route::get('admin/permohonan/view/berkasIUTM/{id}','SiteController@showBerkasIUTM');
+Route::get('admin/permohonan/view/berkasSTPW/{id}','SiteController@showBerkasSTPW');
+Route::get('admin/permohonan/view/berkasITPMB/{id}','SiteController@showBerkasITPMB');
 
 Route::post('admin/setujuIUTM','PermohonanController@setujuIUTM'); //ubah status aja
 // Route::post('admin/setujuIUTM','PermohonanController@setujuIUTM'); //bikin pdf

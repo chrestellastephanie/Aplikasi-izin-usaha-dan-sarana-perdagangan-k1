@@ -152,14 +152,14 @@ class PermohonanController extends Controller {
 		$id = Input::get('id');
 		$status = 'accepted';
 		$tgl = Carbon::now();
-		// database::changeStatusIUTM($id,$status, $tgl);
+		database::changeStatusIUTM($id,$status, $tgl);
 		
 		// $iutm = database::getPermohonanIUTMbyId($id);
 		// $pdf = \PDF::loadView('surat-izin-iutm',compact('iutm'));
         // return $pdf->download("tes.pdf"); //kasih nama sesuai no izinnya -> ntar diganti sama save pdf nya aja
 		// PermohonanController::sendMail('m2t.math@gmail.com',$status);
 
-		return redirect('admin/permohonan/view'); // balik ke halaman awal
+		return redirect('admin/permohonan/view/iutm'); // balik ke halaman awal
 	}
 
 	
@@ -169,7 +169,7 @@ class PermohonanController extends Controller {
 		$status = 'accepted';
 		$tgl = Carbon::now();
 		database::changeStatusSTPW($id,$status, $tgl);
-		return redirect('admin/permohonan/view');
+		return redirect('admin/permohonan/view/stpw');
 	}
 
 	public static function setujuITPMB(){
@@ -177,28 +177,28 @@ class PermohonanController extends Controller {
 		$status = 'accepted';
 		$tgl = Carbon::now();
 		database::changeStatusITPMB($id,$status, $tgl);
-		return redirect('admin/permohonan/view');
+		return redirect('admin/permohonan/view/itpmb');
 	}
 	public static function tolakIUTM(){
 		$id = Input::get('id');
 		$status = 'rejected';
 		$tgl = Carbon::now();
 		database::changeStatusIUTM($id,$status, $tgl);
-		return redirect('admin/permohonan/view');
+		return redirect('admin/permohonan/view/iutm');
 	}
 	public static function tolakSTPW(){
 		$id = Input::get('id');
 		$status = 'rejected';
 		$tgl = Carbon::now();
 		database::changeStatusSTPW($id,$status, $tgl);
-		return redirect('admin/permohonan/view');
+		return redirect('admin/permohonan/view/stpw');
 	}
 	public static function tolakITPMB(){
 		$id = Input::get('id');
 		$status = 'rejected';
 		$tgl = Carbon::now();
 		database::changeStatusITPMB($id,$status, $tgl);
-		return redirect('admin/permohonan/view');
+		return redirect('admin/permohonan/view/itpmb');
 	}
 	public static function showAcceptedIUTM(){
 		$iutm = database::getDisetujuiIUTM();
