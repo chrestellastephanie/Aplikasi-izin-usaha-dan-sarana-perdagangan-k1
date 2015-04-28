@@ -46,8 +46,22 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 		      <ul class="menu nav navbar-nav ">
 		        {{--<li><a href="../permohonan">home</a></li>--}}
-			        <li><a href="/admin/permohonan/view">permohonan</a></li>
-			        <li><a href="/admin/izin">izin</a></li>
+			        	<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Permohonan<span class="caret"></span></a>
+							<ul class="dropdown-menu" role="menu">
+								<li><a href="/admin/permohonan/view/iutm">Permohonan IUTM, IUPP, IUPPT</a></li>
+								<li><a href="/admin/permohonan/view/stpw">Permohonan STPW</a></li>
+								<li><a href="/admin/permohonan/view/itpmb">Permohonan ITPMB</a></li>
+							</ul>
+						</li>
+			        	<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Surat Izin<span class="caret"></span></a>
+							<ul class="dropdown-menu" role="menu">
+								<li><a href="/admin/izin/iutm">Izin IUTM, IUPP, IUPPT</a></li>
+								<li><a href="/admin/izin/stpw">Izin STPW</a></li>
+								<li><a href="/admin/izin/itpmb">Izin ITPMB</a></li>
+							</ul>
+						</li>
 			        @if (Auth::guest())
 						<li><a href="{{ url('/auth/login') }}">Login</a></li>
 						<li><a href="{{ url('/auth/register') }}">Register</a></li>

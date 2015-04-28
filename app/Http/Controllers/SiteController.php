@@ -28,11 +28,25 @@ class SiteController extends Controller {
 		$itpmb = database::getPermohonanITPMBbyId($id);
 		return view ('berkas-itpmb',compact('itpmb'));
 	}
-	public function showIzinIUTM($id){
-		$iutm = database::getPermohonanIUTMbyId($id);
+	
+	public function showPermohonanIUTM(){
+		$iutm = database::getUnProcessedIUTM();
+		return view('permohonan-iutm',compact('iutm'));
+	}
+	public function showPermohonanSTPW(){
+		$stpw = database::getUnProcessedSTPW();
+		return view('permohonan-stpw',compact('stpw'));
+	}
+	public function showPermohonanITPMB(){
+		$itpmb = database::getUnProcessedITPMB();
+		return view('permohonan-itpmb',compact('itpmb'));
+	}
 
-		$pdf = \PDF::loadView('surat-izin-iutm',compact('iutm'));
-        return $pdf->stream("tes.pdf"); //kasih nama sesuai no izinnya -> ntar diganti sama save pdf nya aja
+	public function showIzinIUTM($id){
+		// $iutm = database::getPermohonanIUTMbyId($id);
+
+		// $pdf = \PDF::loadView('surat-izin-iutm',compact('iutm'));
+        // return $pdf->stream("tes.pdf"); //kasih nama sesuai no izinnya -> ntar diganti sama save pdf nya aja
 		// return view ('surat-izin-iutm',compact('iutm'));
 	}
 }

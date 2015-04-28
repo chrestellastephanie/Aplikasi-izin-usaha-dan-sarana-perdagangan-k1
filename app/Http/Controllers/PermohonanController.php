@@ -200,10 +200,16 @@ class PermohonanController extends Controller {
 		database::changeStatusITPMB($id,$status, $tgl);
 		return redirect('admin/permohonan/view');
 	}
-	public static function showAccepted(){
+	public static function showAcceptedIUTM(){
 		$iutm = database::getDisetujuiIUTM();
+		return view ('izin-disetujui-iutm', compact('iutm'));
+	}
+	public static function showAcceptedSTPW(){
 		$stpw = database::getDisetujuiSTPW();
+		return view ('izin-disetujui-stpw', compact('stpw'));
+	}
+	public static function showAcceptedITPMB(){
 		$itpmb = database::getDisetujuiITPMB();
-		return view ('izin-disetujui', compact('iutm','stpw','itpmb'));
+		return view ('izin-disetujui-itpmb', compact('itpmb'));
 	}
 }
