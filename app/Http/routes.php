@@ -13,7 +13,7 @@
 
 Route::get('/', 'WelcomeController@index');
 
-Route::get('home', 'HomeController@index');
+Route::get('admin', 'HomeController@index');
 
 Route::controllers([
 	'auth' => 'Auth\AuthController',
@@ -33,7 +33,7 @@ Route::get('user-profile','UserProfileController@index');
 
 
 // dinas
-Route::get('admin','SiteController@indexAdminView');
+// Route::get('admin','SiteController@indexAdminView');
 Route::get('admin/permohonan/view','PermohonanController@index');
 // Route::get('admin/permohonan/berkasIUTM','PermohonanController@berkasIUTMView');
 Route::get('admin/permohonan/berkasIUTM/{id}','SiteController@showBerkasIUTM');
