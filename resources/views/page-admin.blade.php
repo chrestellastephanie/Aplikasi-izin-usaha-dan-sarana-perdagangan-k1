@@ -47,6 +47,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		      <ul class="menu nav navbar-nav ">
 		        {{--<li><a href="../permohonan">home</a></li>--}}
 			        <li><a href="/admin/permohonan/view">permohonan</a></li>
+			        <li><a href="/admin/izin">izin</a></li>
 			        @if (Auth::guest())
 						<li><a href="{{ url('/auth/login') }}">Login</a></li>
 						<li><a href="{{ url('/auth/register') }}">Register</a></li>

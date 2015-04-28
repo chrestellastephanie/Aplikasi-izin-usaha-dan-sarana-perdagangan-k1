@@ -8,6 +8,7 @@ use App\Permohonanitpmb;
 use App\database;
 use Request;
 use Input;
+use Mail;
 use Carbon\Carbon;
 use App\Http\PDF;
 use Barryvdh\DomPDF\Facade;
@@ -132,19 +133,6 @@ class PermohonanController extends Controller {
 	public function berkasITPMBView(){
 		return view ('berkas-itpmb');
 	}
-	public static function setujuIUTM(){
-		$id = Input::get('id');
-		$status = 'accepted';
-		$tgl = Carbon::now();
-		database::changeStatusIUTM($id,$status, $tgl);
-		
-		// $iutm = database::getPermohonanIUTMbyId($id);
-		// $pdf = \PDF::loadView('surat-izin-iutm',compact('iutm'));
-        // return $pdf->download("tes.pdf"); //kasih nama sesuai no izinnya -> ntar diganti sama save pdf nya aja
-
-		return redirect('admin/permohonan/view', compact('pdf')); // balik ke halaman awal
-	}
-
 	public function sendMail($email, $status) //$name, $email, $id_permohonan, $status)
 	{
 		$isi_email = '';
@@ -160,6 +148,21 @@ class PermohonanController extends Controller {
  	   		$message->to($email);
 		} );
 	}
+	public function setujuIUTM(){
+		$id = Input::get('id');
+		$status = 'accepted';
+		$tgl = Carbon::now();
+		// database::changeStatusIUTM($id,$status, $tgl);
+		
+		// $iutm = database::getPermohonanIUTMbyId($id);
+		// $pdf = \PDF::loadView('surat-izin-iutm',compact('iutm'));
+        // return $pdf->download("tes.pdf"); //kasih nama sesuai no izinnya -> ntar diganti sama save pdf nya aja
+		// PermohonanController::sendMail('m2t.math@gmail.com',$status);
+
+		return redirect('admin/permohonan/view'); // balik ke halaman awal
+	}
+
+	
 
 	public static function setujuSTPW(){
 		$id = Input::get('id');
@@ -196,5 +199,12 @@ class PermohonanController extends Controller {
 		$tgl = Carbon::now();
 		database::changeStatusITPMB($id,$status, $tgl);
 		return redirect('admin/permohonan/view');
+	}
+	public static function showAccepted(){
+		$iutm = database::getDisetujuiIUTM();
+		$stpw = database::getDisetujuiSTPW();
+		$itpmb = database::getDisetujuiITPMB();
+
+		return view ('izin-disetujui', compact('iutm','stpw','itpmb'));
 	}
 }

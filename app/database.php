@@ -62,4 +62,22 @@ class database extends Model {
 						'waktuPengajuan' => $tgl,
 					]);
 	}
+	public static function getDisetujuiIUTM(){
+		return DB::table('permohonaniutms')
+				->where('status','=','accepted')
+				->orderBy('waktuPengajuan','desc')
+				->get();
+	}
+	public static function getDisetujuiSTPW(){
+		return DB::table('permohonanstpws')
+				->where('status','=','accepted')
+				->orderBy('waktuPengajuan','desc')
+				->get();
+	}
+	public static function getDisetujuiITPMB(){
+		return DB::table('permohonanitpmbs')
+				->where('status','=','accepted')
+				->orderBy('waktuPengajuan','desc')
+				->get();
+	}
 }

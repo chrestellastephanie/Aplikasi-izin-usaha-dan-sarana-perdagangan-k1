@@ -48,3 +48,5 @@ Route::post('admin/setujuITPMB','PermohonanController@setujuITPMB');
 Route::post('admin/tolakIUTM','PermohonanController@tolakIUTM');
 Route::post('admin/tolakSTPW','PermohonanController@tolakSTPW');
 Route::post('admin/tolakITPMB','PermohonanController@tolakITPMB');
+
+Route::get('admin/izin','PermohonanController@showAccepted');

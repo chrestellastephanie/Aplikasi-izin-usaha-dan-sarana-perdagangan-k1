@@ -80,7 +80,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			<div class="col-md-8">
 					<div class="col-md-10 slider_text">
 						<h2>Aplikasi Izin Usaha dan Sarana Perdagangan</h2>
-						<h3>Admin Mode</h3><br>
+						<h3>Admin</h3><br>
 						<a href="#loginForm"><button class="btn_style">Login</button></a>
 					</div>
 				</div>
