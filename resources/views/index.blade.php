@@ -77,7 +77,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				</div>
 				<div class="col-md-4">
 					<div class="slider_img">
-						<img src="images/pic1.png" alt="" class="img-responsive"/>
+						<img src="/images/pic1.png" alt="" class="img-responsive"/>
 					</div>
 				</div>
 			</div>

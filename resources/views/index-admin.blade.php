@@ -86,13 +86,13 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				</div>
 				<div class="col-md-4">
 					<div class="slider_img">
-						<img src="images/pic1.png" alt="" class="img-responsive"/>
+						<img src="/images/pic1.png" alt="" class="img-responsive"/>
 					</div>
 				</div>
 			</div>
 	</div>
 </div>
-<div class="main"><!-- start main -->
+<div class="main" id="loginForm"><!-- start main -->
 <!-- <div class="container main" id="loginForm">
 	<div class="topmargin">
 		<h2>Login</h2><br><br>
@@ -113,12 +113,12 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			</form>
 		</div>
 	</div>
-	
-
-
-
 </div> -->
-@yield('content')
+<br><br><br>
+<div id="loginForm">
+	@yield('content')
+</div>
+<br><br><br>
 </div>
 <div class="footer_bg"><!-- start footre -->
 	<div class="container">

@@ -140,9 +140,9 @@ class PermohonanController extends Controller {
 		
 		// $iutm = database::getPermohonanIUTMbyId($id);
 		// $pdf = \PDF::loadView('surat-izin-iutm',compact('iutm'));
-        // return $pdf->stream("tes.pdf"); //kasih nama sesuai no izinnya -> ntar diganti sama save pdf nya aja
+        // return $pdf->download("tes.pdf"); //kasih nama sesuai no izinnya -> ntar diganti sama save pdf nya aja
 
-		return redirect('admin/permohonan/view'); // balik ke halaman awal
+		return redirect('admin/permohonan/view', compact('pdf')); // balik ke halaman awal
 	}
 
 	public function sendMail($email, $status) //$name, $email, $id_permohonan, $status)
