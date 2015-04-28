@@ -57,4 +57,6 @@ Route::get('admin/izin/iutm','PermohonanController@showAcceptedIUTM');
 Route::get('admin/izin/stpw','PermohonanController@showAcceptedSTPW');
 Route::get('admin/izin/itpmb','PermohonanController@showAcceptedITPMB');
 
-Route::get('admin/izin/{id}','SiteController@showIzinIUTM');
+Route::get('admin/izin/iutm/{id}','SiteController@showIzinIUTM');
+Route::get('admin/izin/stpw/{id}','SiteController@showIzinSTPW');
+Route::get('admin/izin/itpmb/{id}','SiteController@showIzinITPMB');

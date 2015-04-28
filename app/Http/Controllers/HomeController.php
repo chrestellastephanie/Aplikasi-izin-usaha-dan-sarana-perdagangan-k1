@@ -30,7 +30,7 @@ class HomeController extends Controller {
 	 */
 	public function index()
 	{
-		return redirect(url('/admin/permohonan/view'));
+		return redirect(url('/admin/permohonan/view/iutm'));
 	}
 
 }

@@ -43,10 +43,24 @@ class SiteController extends Controller {
 	}
 
 	public function showIzinIUTM($id){
-		// $iutm = database::getPermohonanIUTMbyId($id);
+		$iutm = database::getPermohonanIUTMbyId($id);
 
 		// $pdf = \PDF::loadView('surat-izin-iutm',compact('iutm'));
         // return $pdf->stream("tes.pdf"); //kasih nama sesuai no izinnya -> ntar diganti sama save pdf nya aja
-		// return view ('surat-izin-iutm',compact('iutm'));
+		return view ('debug',compact('iutm','id'));
+	}
+	public function showIzinSTPW($id){
+		$stpw = database::getPermohonanSTPWbyId($id);
+
+		// $pdf = \PDF::loadView('surat-izin-iutm',compact('iutm'));
+        // return $pdf->stream("tes.pdf"); //kasih nama sesuai no izinnya -> ntar diganti sama save pdf nya aja
+		return view ('debug',compact('stpw','id'));
+	}
+	public function showIzinITPMB($id){
+		$itpmb = database::getPermohonanITPMBbyId($id);
+
+		// $pdf = \PDF::loadView('surat-izin-iutm',compact('iutm'));
+        // return $pdf->stream("tes.pdf"); //kasih nama sesuai no izinnya -> ntar diganti sama save pdf nya aja
+		return view ('debug',compact('itpmb','id'));
 	}
 }

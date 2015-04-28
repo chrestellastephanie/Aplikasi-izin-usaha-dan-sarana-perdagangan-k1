@@ -16,7 +16,7 @@
 					</li>
 				</div>
 				<div class="col-md-3">
-					<a href="izin/{{$mohon->id}}"><button class="btn2 btn_style">Lihat Izin</button></a>
+					<a href="itpmb/{{$mohon->id}}"><button class="btn2 btn_style">Lihat Izin</button></a>
 				</div>
 			</div>
 		</div>
