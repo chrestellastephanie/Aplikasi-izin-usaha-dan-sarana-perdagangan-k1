@@ -152,7 +152,7 @@ class PermohonanController extends Controller {
 		$id = Input::get('id');
 		$status = 'accepted';
 		$tgl = Carbon::now();
-		// database::changeStatusIUTM($id,$status, $tgl);
+		database::changeStatusIUTM($id,$status, $tgl);
 		
 		// $iutm = database::getPermohonanIUTMbyId($id);
 		// $pdf = \PDF::loadView('surat-izin-iutm',compact('iutm'));
