@@ -34,14 +34,18 @@ Route::get('user-profile','UserProfileController@index');
 
 // dinas
 // Route::get('admin','SiteController@indexAdminView');
-Route::get('admin/permohonan/view','PermohonanController@index');
+// Route::get('admin/permohonan/view','PermohonanController@index');
+Route::get('admin/permohonan/view/iutm','SiteController@showPermohonanIUTM');
+Route::get('admin/permohonan/view/stpw','SiteController@showPermohonanSTPW');
+Route::get('admin/permohonan/view/itpmb','SiteController@showPermohonanITPMB');
+
 // Route::get('admin/permohonan/berkasIUTM','PermohonanController@berkasIUTMView');
-Route::get('admin/permohonan/berkasIUTM/{id}','SiteController@showBerkasIUTM');
-Route::get('admin/permohonan/berkasSTPW/{id}','SiteController@showBerkasSTPW');
-Route::get('admin/permohonan/berkasITPMB/{id}','SiteController@showBerkasITPMB');
+Route::get('admin/permohonan/view/berkasIUTM/{id}','SiteController@showBerkasIUTM');
+Route::get('admin/permohonan/view/berkasSTPW/{id}','SiteController@showBerkasSTPW');
+Route::get('admin/permohonan/view/berkasITPMB/{id}','SiteController@showBerkasITPMB');
 
 Route::post('admin/setujuIUTM','PermohonanController@setujuIUTM'); //ubah status aja
-Route::post('admin/setujuIUTM','PermohonanController@setujuIUTM'); //bikin pdf
+// Route::post('admin/setujuIUTM','PermohonanController@setujuIUTM'); //bikin pdf
 Route::post('admin/setujuSTPW','PermohonanController@setujuSTPW');
 Route::post('admin/setujuITPMB','PermohonanController@setujuITPMB');
 
@@ -49,5 +53,10 @@ Route::post('admin/tolakIUTM','PermohonanController@tolakIUTM');
 Route::post('admin/tolakSTPW','PermohonanController@tolakSTPW');
 Route::post('admin/tolakITPMB','PermohonanController@tolakITPMB');
 
-Route::get('admin/izin','PermohonanController@showAccepted');
-Route::get('admin/izin/{id}','SiteController@showIzinIUTM');
+Route::get('admin/izin/iutm','PermohonanController@showAcceptedIUTM');
+Route::get('admin/izin/stpw','PermohonanController@showAcceptedSTPW');
+Route::get('admin/izin/itpmb','PermohonanController@showAcceptedITPMB');
+
+Route::get('admin/izin/iutm/{id}','SiteController@showIzinIUTM');
+Route::get('admin/izin/stpw/{id}','SiteController@showIzinSTPW');
+Route::get('admin/izin/itpmb/{id}','SiteController@showIzinITPMB');

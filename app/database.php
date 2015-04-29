@@ -35,6 +35,21 @@ class database extends Model {
 				->where('id','=',$id)
 				->get();
 	}
+	public static function getUnProcessedIUTM(){
+		return DB::table('permohonaniutms')
+				->where('status','=','notProcessed')
+				->get();	
+	}
+	public static function getUnProcessedSTPW(){
+		return DB::table('permohonanstpws')
+				->where('status','=','notProcessed')
+				->get();	
+	}
+	public static function getUnProcessedITPMB(){
+		return DB::table('permohonanitpmbs')
+				->where('status','=','notProcessed')
+				->get();	
+	}
 	public static function changeStatusIUTM($id,$status,$tgl){
 		DB::table('permohonaniutms')
 				->where('id','=',$id)
