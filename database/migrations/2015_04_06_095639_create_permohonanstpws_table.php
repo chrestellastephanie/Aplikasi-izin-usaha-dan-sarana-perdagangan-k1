@@ -12,7 +12,7 @@ class CreatePermohonanstpwsTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('permohonanstpws', function(Blueprint $table)
+		Schema::create('ppl_iusp_permohonanstpws', function(Blueprint $table)
 		{
 			$table->increments('id');
 			$table->string('namaPerusahaan');

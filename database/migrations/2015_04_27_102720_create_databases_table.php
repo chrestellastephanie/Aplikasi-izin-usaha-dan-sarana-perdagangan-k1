@@ -12,7 +12,7 @@ class CreateDatabasesTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('databases', function(Blueprint $table)
+		Schema::create('ppl_iusp_databases', function(Blueprint $table)
 		{
 			$table->increments('id');
 			$table->timestamps();

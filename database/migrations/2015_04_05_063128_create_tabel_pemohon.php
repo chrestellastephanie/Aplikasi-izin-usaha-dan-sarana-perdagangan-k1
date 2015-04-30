@@ -12,7 +12,7 @@ class CreateTabelPemohon extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('pemohon', function(Blueprint $table)
+		Schema::create('ppl_iusp_pemohon', function(Blueprint $table)
 		{
 			$table->increments('id');
 			$table->string('nama');

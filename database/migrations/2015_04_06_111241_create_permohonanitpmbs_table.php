@@ -12,7 +12,7 @@ class CreatePermohonanitpmbsTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('permohonanitpmbs', function(Blueprint $table)
+		Schema::create('ppl_iusp_permohonanitpmbs', function(Blueprint $table)
 		{
 			$table->increments('id');
 

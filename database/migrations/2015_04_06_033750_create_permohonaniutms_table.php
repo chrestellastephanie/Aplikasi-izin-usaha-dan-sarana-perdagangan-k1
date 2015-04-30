@@ -12,7 +12,7 @@ class CreatePermohonaniutmsTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('permohonaniutms', function(Blueprint $table)
+		Schema::create('ppl_iusp_permohonaniutms', function(Blueprint $table)
 		{
 			$table->increments('id');
 			$table->string('namaPerusahaan');
