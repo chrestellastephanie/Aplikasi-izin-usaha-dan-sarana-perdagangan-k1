@@ -1,6 +1,6 @@
 <html>
 <head>
-<title>Surat Izin IUTM/IUPP/IUPPT</title>
+<title>Surat Izin STPW</title>
 <link rel="stylesheet" href="{{url('css/style.css')}}" />
 <script type="text/javascript" src="js/jquery.min.js"></script>
 <script type="text/javascript" src="js/bootstrap.js"></script>
@@ -23,15 +23,18 @@ body {background-image: url('images/bandung.png');}
 			<hr>
 		</div>
 		<div class="judul">
-			SURAT IZIN IUTM-IUPP-IUPPT 
+			SURAT TANDA PENDAFTARAN WARALABA 
 		</div>
 
-			@foreach($iutm as $permohonan)
-				<div class="noIzin">Nomor izin : IUTM-IUPP-IUPPT/<?php echo date("Y/m"); ?>/{{$permohonan->id}}</div>
+			@foreach($stpw as $permohonan)
+				<div class="noIzin">Nomor izin : STPW/<?php echo date("Y/m"); ?>/{{$permohonan->id}}</div>
 				<br><br><br>
-			<div class="isi">
+			<div class="isi-stpw">
 				<table style="width:90%;">
 					<br>
+					<tr>
+						<th col="3">Umum</th>
+					</tr>
 					<tr>
 						<td style="width:40%;">Nama Perusahaan</td>
 						<td style="width:3%;">:</td>
@@ -48,19 +51,36 @@ body {background-image: url('images/bandung.png');}
 						<td>{{$permohonan->alamatPerusahaan}}</td>
 					</tr><br>
 					<tr>
-						<td style="width:40%;">Nilai Kekayaan Bersih</td>
-						<td style="width:3%;">:</td>
-						<td>Rp. {{$permohonan->modalBersih}},00</td>
-					</tr><br>
-					<tr>
 						<td style="width:40%;">Bentuk Usaha</td>
 						<td style="width:3%;">:</td>
 						<td>{{$permohonan->bentukBadanUsaha}}</td>
 					</tr><br>
+					<tr>
+						<th col="3">Hak dan Kewajiban</th>
+					</tr>
+					<tr>
+						<td style="width:40%;">Hak Pemberi</td>
+						<td style="width:3%;">:</td>
+						<td>{{$permohonan->hakPemberi}}</td>
+					</tr><br>
+					<tr>
+						<td style="width:40%;">Kewajiban Pemberi</td>
+						<td style="width:3%;">:</td>
+						<td>{{$permohonan->kewajibanPemberi}}</td>
+					</tr><br>
+					<tr>
+						<td style="width:40%;">Hak Penerima</td>
+						<td style="width:3%;">:</td>
+						<td>{{$permohonan->hakPenerima}}</td>
+					</tr><br>
+					<tr>
+						<td style="width:40%;">Kewajiban Penerima</td>
+						<td style="width:3%;">:</td>
+						<td>{{$permohonan->kewajibanPenerima}}</td>
+					</tr>
 				</table>
 			</div>
 			@endforeach
-			<br>
 		<div class="ketentuan">
 			<b>SIUP ini dibuat dengan ketentuan</b><br>
 			<table style="width:100%">
@@ -95,7 +115,7 @@ body {background-image: url('images/bandung.png');}
 					<td>Bandung</td>
 				</tr>
 				<tr>
-					@foreach ($iutm as $permohonan)
+					@foreach ($stpw as $permohonan)
 					<td>Pada Tanggal</td>
 					<td>:</td>
 					<td><?php echo substr($permohonan->updated_at,0,10)?></td>

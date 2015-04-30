@@ -655,6 +655,9 @@ body {
 
 
 /* mystyle */
+right{
+	text-align: right;
+}
 .btn2{
 	background: #F15F43;
 	color: #ffffff;
@@ -694,13 +697,45 @@ body {
 .buttonSetuju{
 	background-color: #12B844;
 }
-.kop img{
-	width:10%;
+.kops{
+	width: 100%;
 }
-
-
-
-
+.kop-logo{
+	width: 30%;
+	margin-left: 40%;
+}
+.kop-logo img{
+	width: 100px;
+}
+.kop-namadinas{
+	width:100%;
+	text-align: center;
+}
+.judul{
+	text-align: center;
+	width: 100%;
+	font-size: 30px;
+	margin-top: 1%;
+	margin-bottom: 2%;
+}
+.noIzin{
+	text-align: center;
+	width: 100%;
+}
+.isi{
+	margin-left: 5%;
+}
+.ketentuan{
+	font-size: 10px;
+}
+.sign{
+	width: 30%;
+	margin-left: 60%;
+	font-size: 12px;
+}
+.isi-stpw{
+	font-size: 15px;
+}
 /***** Media Quries *****/
 @media only screen and (max-width: 1440px) and (min-width: 240px)  {
 	.wrap{

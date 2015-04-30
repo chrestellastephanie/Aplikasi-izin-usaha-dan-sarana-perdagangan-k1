@@ -50,8 +50,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		    <!-- Collect the nav links, forms, and other content for toggling -->
 		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 		      <ul class="menu nav navbar-nav ">
-		         <li><a href="#">about us</a></li>
-		        <li><a href="/">portal application</a></li>
+		         
 		        @if (Auth::guest())
 					<li><a href="{{ url('/auth/login') }}">Login</a></li>
 					<li><a href="{{ url('/auth/register') }}">Register</a></li>
@@ -63,6 +62,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						</ul>
 					</li>
 				@endif
+				<li><a href="#">about us</a></li>
+		        <li><a href="/">portal application</a></li>
 		        <!-- <li><a href="about.html">ITPMB</a></li> 
 		        <li><a href="contact.html">contact</a></li> -->
 		      </ul>

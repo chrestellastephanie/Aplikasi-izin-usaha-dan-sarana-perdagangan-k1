@@ -45,22 +45,26 @@ class SiteController extends Controller {
 	public function showIzinIUTM($id){
 		$iutm = database::getPermohonanIUTMbyId($id);
 
-		// $pdf = \PDF::loadView('surat-izin-iutm',compact('iutm'));
-        // return $pdf->stream("tes.pdf"); //kasih nama sesuai no izinnya -> ntar diganti sama save pdf nya aja
-		return view ('debug',compact('iutm','id'));
+		$pdf = \PDF::loadView('surat-izin-iutm',compact('iutm'));
+
+        return $pdf->stream("iutm.pdf"); //kasih nama sesuai no izinnya -> ntar diganti sama save pdf nya aja
+		
+
+
+		// return view ('surat-izin-iutm',compact('iutm'));
 	}
 	public function showIzinSTPW($id){
 		$stpw = database::getPermohonanSTPWbyId($id);
 
-		// $pdf = \PDF::loadView('surat-izin-iutm',compact('iutm'));
-        // return $pdf->stream("tes.pdf"); //kasih nama sesuai no izinnya -> ntar diganti sama save pdf nya aja
-		return view ('debug',compact('stpw','id'));
+		$pdf = \PDF::loadView('surat-izin-stpw',compact('stpw'));
+        return $pdf->stream("tes.pdf"); //kasih nama sesuai no izinnya -> ntar diganti sama save pdf nya aja
+		// return view ('debug',compact('stpw','id'));
 	}
 	public function showIzinITPMB($id){
 		$itpmb = database::getPermohonanITPMBbyId($id);
 
-		// $pdf = \PDF::loadView('surat-izin-iutm',compact('iutm'));
-        // return $pdf->stream("tes.pdf"); //kasih nama sesuai no izinnya -> ntar diganti sama save pdf nya aja
-		return view ('debug',compact('itpmb','id'));
+		$pdf = \PDF::loadView('surat-izin-itpmb',compact('itpmb'));
+        return $pdf->stream("tes.pdf"); //kasih nama sesuai no izinnya -> ntar diganti sama save pdf nya aja
+		// return view ('debug',compact('itpmb','id'));
 	}
 }
