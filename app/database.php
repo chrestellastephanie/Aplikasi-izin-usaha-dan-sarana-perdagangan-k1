@@ -27,7 +27,7 @@ class database extends Model {
 	}
 	public static function getPermohonanSTPWbyId($id){
 		return DB::table('ppl_iusp_permohonanstpws')
-				->where('id','=',$id)
+				->where('id','=',$id)                       
 				->get();
 	}
 	public static function getPermohonanITPMBbyId($id){
