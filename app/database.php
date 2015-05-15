@@ -6,6 +6,7 @@ use DB;
 class database extends Model {
 
 	public static function getPermohonanIUTM(){
+		// return DB::table('ppl_iusp_permohonaniutms')
 		return DB::table('permohonaniutms')
 				->orderBy('waktuPengajuan','desc')
 				->get();
