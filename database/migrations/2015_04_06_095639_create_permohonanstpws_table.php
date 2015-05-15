@@ -40,6 +40,9 @@ class CreatePermohonanstpwsTable extends Migration {
 
 			$table->timestamp('waktuPengajuan');
 			$table->string('status');
+
+            $table->string('tipe');
+            $table->string('nomorIzin');
 			$table->timestamps();
 		});
 	}
