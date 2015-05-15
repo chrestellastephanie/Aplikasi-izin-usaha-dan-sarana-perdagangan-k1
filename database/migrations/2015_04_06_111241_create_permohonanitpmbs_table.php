@@ -12,7 +12,7 @@ class CreatePermohonanitpmbsTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('permohonanitpmbs', function(Blueprint $table)
+		Schema::create('ppl_iusp_permohonanitpmbs', function(Blueprint $table)
 		{
 			$table->increments('id');
 
@@ -28,6 +28,10 @@ class CreatePermohonanitpmbsTable extends Migration {
 			$table->timestamp('waktuPengajuan');
 			$table->string('status');
 
+
+            $table->string('tipe');
+            $table->string('nomorIzin');
+            
 			$table->timestamps();
 		});
 	}
@@ -39,7 +43,7 @@ class CreatePermohonanitpmbsTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('permohonanitpmbs');
+		Schema::drop('ppl_iusp_permohonanitpmbs');
 	}
 
 }

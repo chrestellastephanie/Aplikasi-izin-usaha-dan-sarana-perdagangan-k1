@@ -4,6 +4,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class permohonanstpw extends Model {
 
+	protected $table='ppl_iusp_permohonanstpws';
+
 	protected $fillable = [
 		'namaPerusahaan',
 		'alamatPerusahaan',

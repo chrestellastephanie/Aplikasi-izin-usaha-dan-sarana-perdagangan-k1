@@ -12,7 +12,7 @@ class CreatePermohonanstpwsTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('permohonanstpws', function(Blueprint $table)
+		Schema::create('ppl_iusp_permohonanstpws', function(Blueprint $table)
 		{
 			$table->increments('id');
 			$table->string('namaPerusahaan');
@@ -40,6 +40,9 @@ class CreatePermohonanstpwsTable extends Migration {
 
 			$table->timestamp('waktuPengajuan');
 			$table->string('status');
+
+            $table->string('tipe');
+            $table->string('nomorIzin');
 			$table->timestamps();
 		});
 	}
@@ -51,7 +54,7 @@ class CreatePermohonanstpwsTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('permohonanstpws');
+		Schema::drop('ppl_iusp_permohonanstpws');
 	}
 
 }

@@ -12,7 +12,7 @@ class CreateTabelIzinUsaha extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('izin_usaha', function(Blueprint $table)
+		Schema::create('ppl_iusp_izin_usaha', function(Blueprint $table)
 		{
 			$table->increments('id');
 			$table->string('no_izin');
@@ -31,7 +31,7 @@ class CreateTabelIzinUsaha extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('izin_usaha');
+		Schema::drop('ppl_iusp_izin_usaha');
 	}
 
 }
