@@ -20,6 +20,6 @@
 				</div>
 			</div>
 		</div>
-	@endforeach
-	</ul>
+        @endforeach
+    </ul>
 @endsection

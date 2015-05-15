@@ -29,7 +29,7 @@ class CreateTabelPemohon extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('pemohon');
+		Schema::drop('ppl_iusp_pemohon');
 	}
 
 }

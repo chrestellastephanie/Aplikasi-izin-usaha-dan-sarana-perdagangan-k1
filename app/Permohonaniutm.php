@@ -4,6 +4,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Permohonaniutm extends Model {
 
+	protected $table='ppl_iusp_permohonaniutms';
+
 	protected $fillable = [
 		'namaPerusahaan',
 		'alamatPerusahaan',

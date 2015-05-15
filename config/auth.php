@@ -41,7 +41,7 @@ return [
 	|
 	*/
 
-	'table' => 'users',
+	'table' => 'ppl_iusp_users',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -60,7 +60,7 @@ return [
 
 	'password' => [
 		'email' => 'emails.password',
-		'table' => 'password_resets',
+		'table' => 'ppl_iusp_password_resets',
 		'expire' => 60,
 	],
 
