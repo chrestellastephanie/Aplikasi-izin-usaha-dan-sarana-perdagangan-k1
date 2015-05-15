@@ -136,21 +136,21 @@ class PermohonanController extends Controller {
 	public function berkasITPMBView(){
 		return view ('berkas-itpmb');
 	}
+
 	public function sendMail($email, $status) //$name, $email, $id_permohonan, $status)
 	{
-		$isi_email = '';
-		if ($status == 'accepted'){
-			$isi_email = 'Yang terhormat, warga kota Bandung. Selamat, permohonan izin usaha anda dengan id : 001 telah diterima. Silahkan ambil surat izin anda di dinas blablabla Jalan lalalala, dengan membawa hasil print SKRD yang berada di lampiran email ini sebagai. Sebelum anda mengambil surat izin, anda perlu membayar retribusi sesuai dengan perda blablabla di loket No.XX dengan menggunakan SKRD yang telah anda print. Terima Kasih' ;
-		} else {
-			$isi_email = 'Mohon maaf, permohonan izin usaha anda dengan id : 001 telah ditolak, dikarenakan tidak memenuhi ketentuan permohonan izin usaha. Terima Kasih' ;
-		}
+		$data = [];
+		$data['name'] = 'Warga Kota Bandung';
+		$data['status'] = $status;
+		$data['id_permohonan'] = 1;
 
 		// kirim email
-		Mail::raw($isi_email, function($message) {
+		Mail::send('emailing.mail', $data, function($message) use ($email) {
     		$message->from('coderbodoh@gmail.com', 'Dinas Izin Usaha Kota Bandung');
  	   		$message->to($email);
 		} );
 	}
+
 	public function setujuIUTM(){
 		$id = Input::get('id');
 		$status = 'accepted';
@@ -161,12 +161,10 @@ class PermohonanController extends Controller {
 		// $iutm = database::getPermohonanIUTMbyId($id);
 		// $pdf = \PDF::loadView('surat-izin-iutm',compact('iutm'));
         // return $pdf->download("tes.pdf"); //kasih nama sesuai no izinnya -> ntar diganti sama save pdf nya aja
-		// PermohonanController::sendMail('m2t.math@gmail.com',$status);
+		PermohonanController::sendMail('m2t.math@gmail.com', $status);
 
 		return redirect('admin/permohonan/view/iutm'); // balik ke halaman awal
 	}
-
-	
 
 	public static function setujuSTPW(){
 		$id = Input::get('id');
