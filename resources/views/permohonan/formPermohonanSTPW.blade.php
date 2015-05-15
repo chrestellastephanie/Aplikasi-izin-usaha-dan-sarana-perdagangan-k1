@@ -17,7 +17,7 @@
 		{!! Form::label('alamatPerusahaan', 'Alamat Perusahaan:')!!}
 		{!! Form::text('alamatPerusahaan',null, ['class' => 'form-control'])!!}
 
-		{!! Form::label('direkturPerusahaan', 'Direktur Perusahaan:')!!}
+		{!! Form::label('direkturPerusahaan', 'NIK penanggung jawab:')!!}
 		{!! Form::text('direkturPerusahaan',null, ['class' => 'form-control'])!!}
 
 		{!! Form::label('bentukBadanUsaha', 'Bentuk Badan Usaha:')!!}<br>

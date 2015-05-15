@@ -19,21 +19,19 @@
 		<table style="width:60%;">
 			<tr>
 				<td style="width:1%;"><input type="checkbox" name="KepemilikanTempatValid" value="valid"></td>
-				<td style="width:20%;">Alamat</td>
-				<td style="width:40%;">{{$permohonan->alamatPerusahaan}}</td>
+				<td style="width:20%;">NPWP (status bayar)</td>
+				<td style="width:40%;">cek dari yang lain</td>
 			</tr>
 			<tr>
 				<td style="width:1%;"><input type="checkbox" name="KepemilikanTempatValid" value="valid"></td>
-				<td style="width:20%;">Alamat</td>
-				<td style="width:40%;">{{$permohonan->alamatPerusahaan}}</td>
+				<td style="width:20%;">HO</td>
+				<td style="width:40%;">cek dari yang lain</td>
 			</tr>
 			<tr>
 				<td style="width:1%;"><input type="checkbox" name="KepemilikanTempatValid" value="valid"></td>
-				<td style="width:20%;">Alamat</td>
-				<td style="width:40%;">{{$permohonan->alamatPerusahaan}}</td>
+				<td style="width:20%;">IMB</td>
+				<td style="width:40%;">cek dari yang lain</td>
 			</tr>
-			<hr>
-
 			<tr>
 				<td style="width:1%;"><input type="checkbox" name="KepemilikanTempatValid" value="valid"></td>
 				<td style="width:20%;">Alamat</td>
