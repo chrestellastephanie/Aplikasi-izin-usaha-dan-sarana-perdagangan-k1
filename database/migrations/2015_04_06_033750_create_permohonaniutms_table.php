@@ -40,7 +40,7 @@ class CreatePermohonaniutmsTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('permohonaniutms');
+		Schema::drop('ppl_iusp_permohonaniutms');
 	}
 
 }

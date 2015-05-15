@@ -31,7 +31,7 @@ class CreateTabelIzinUsaha extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('izin_usaha');
+		Schema::drop('ppl_iusp_izin_usaha');
 	}
 
 }

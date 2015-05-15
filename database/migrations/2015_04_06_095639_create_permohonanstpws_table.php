@@ -51,7 +51,7 @@ class CreatePermohonanstpwsTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('permohonanstpws');
+		Schema::drop('ppl_iusp_permohonanstpws');
 	}
 
 }
