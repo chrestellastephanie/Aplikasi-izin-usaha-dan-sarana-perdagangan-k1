@@ -146,8 +146,8 @@ class PermohonanController extends Controller {
 
 		// kirim email
 		Mail::send('emailing.mail', $data, function($message) use ($email) {
-    		$message->from('coderbodoh@gmail.com', 'Dinas Izin Usaha Kota Bandung');
- 	   		$message->to($email);
+    		$message->from('dinasperizinan.kotabandung@gmail.com', 'Dinas Perizinan Kota Bandung');
+ 	   		$message->to($email)->subject("Status Permohonan Izin Usaha Kota Bandung");
 		} );
 	}
 

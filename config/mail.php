@@ -54,7 +54,7 @@ return [
 	|
 	*/
 
-	'from' => ['address' => 'coderbodoh@gmail.com', 'name' => 'Coder Bodoh'],
+	'from' => ['address' => 'badanperizinan.kotabandung@gmail.com', 'name' => 'Badan Perizinan Kota Bandung'],
 
 	/*
 	|--------------------------------------------------------------------------
