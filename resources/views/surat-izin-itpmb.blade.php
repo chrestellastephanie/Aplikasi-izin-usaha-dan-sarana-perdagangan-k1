@@ -27,7 +27,7 @@ body {background-image: url('images/bandung.png');}
 		</div>
 
 			@foreach($itpmb as $permohonan)
-				<div class="noIzin">Nomor izin : ITPMB/<?php echo date("Y/m"); ?>/{{$permohonan->id}}</div>
+				<div class="noIzin">Nomor izin : {{$permohonan->nomorIzin}}</div>
 				<br><br><br>
 			<div class="isi">
 				<table style="width:90%;">

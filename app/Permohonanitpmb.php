@@ -16,6 +16,7 @@ class Permohonanitpmb extends Model {
 		'miras_golC',
 		'waktuPengajuan',
 		'status',
+		'aktaPendirianPerusahaan',
 	];
 	
 	protected $dates = ['waktuPengajuan'];

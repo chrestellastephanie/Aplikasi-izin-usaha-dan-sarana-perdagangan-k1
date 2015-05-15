@@ -24,6 +24,23 @@
 			</tr>
 			<tr>
 				<td style="width:1%;"><input type="checkbox" name="KepemilikanTempatValid" value="valid"></td>
+				<td style="width:20%;">Alamat</td>
+				<td style="width:40%;">{{$permohonan->alamatPerusahaan}}</td>
+			</tr>
+			<tr>
+				<td style="width:1%;"><input type="checkbox" name="KepemilikanTempatValid" value="valid"></td>
+				<td style="width:20%;">Alamat</td>
+				<td style="width:40%;">{{$permohonan->alamatPerusahaan}}</td>
+			</tr>
+			<hr>
+
+			<tr>
+				<td style="width:1%;"><input type="checkbox" name="KepemilikanTempatValid" value="valid"></td>
+				<td style="width:20%;">Alamat</td>
+				<td style="width:40%;">{{$permohonan->alamatPerusahaan}}</td>
+			</tr>
+			<tr>
+				<td style="width:1%;"><input type="checkbox" name="KepemilikanTempatValid" value="valid"></td>
 				<td style="width:20%;">Bentuk Badan Usaha</td>
 				<td style="width:40%;">{{$permohonan->bentukBadanUsaha}}</td>
 			</tr>

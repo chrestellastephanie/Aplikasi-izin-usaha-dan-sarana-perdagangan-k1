@@ -28,7 +28,7 @@ class CreatePermohonanitpmbsTable extends Migration {
 			$table->timestamp('waktuPengajuan');
 			$table->string('status');
 
-
+			$table->string('aktaPendirianPerusahaan');
             $table->string('tipe');
             $table->string('nomorIzin');
             

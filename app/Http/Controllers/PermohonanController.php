@@ -51,6 +51,7 @@ class PermohonanController extends Controller {
 	public function ajukan_IUTM_IUPP_IUPPT(CreatePermohonanIUTMRequest $request){
 		$input = $request->all();
 		$input['status'] = 'notProcessed';
+		$input['tipe'] = 'iutm';
 		$input['waktuPengajuan']=Carbon::now();
 		//upload file
 
@@ -101,6 +102,7 @@ class PermohonanController extends Controller {
 	public function ajukan_STPW(CreatePermohonanSTPWRequest $request){
 		$input = $request->all();
 		$input['status'] = 'notProcessed';
+		$input['tipe'] = 'stpw';
 		$input['waktuPengajuan']=Carbon::now();
 		
 		permohonanstpw::create($input);
@@ -110,6 +112,7 @@ class PermohonanController extends Controller {
 	public function ajukan_ITPMB(CreatePermohonanITPMBRequest $request){
 		$input = $request->all();
 		$input['status'] = 'notProcessed';
+		$input['tipe'] = 'itpmb';
 		$input['waktuPengajuan']=Carbon::now();
 		//upload file
 		$file = $request->file('aktaPendirianPerusahaan');
@@ -152,7 +155,8 @@ class PermohonanController extends Controller {
 		$id = Input::get('id');
 		$status = 'accepted';
 		$tgl = Carbon::now();
-		database::changeStatusIUTM($id,$status, $tgl);
+		$noSurat = 'IUTM-IUPP-IUPPT/'.$tgl->year.'/'.$tgl->month.'/'.$id;
+		database::changeStatusIUTM($id,$status, $tgl, $noSurat);
 		
 		// $iutm = database::getPermohonanIUTMbyId($id);
 		// $pdf = \PDF::loadView('surat-izin-iutm',compact('iutm'));
@@ -168,7 +172,8 @@ class PermohonanController extends Controller {
 		$id = Input::get('id');
 		$status = 'accepted';
 		$tgl = Carbon::now();
-		database::changeStatusSTPW($id,$status, $tgl);
+		$noSurat = 'STPW/'.$tgl->year.'/'.$tgl->month.'/'.$id;
+		database::changeStatusSTPW($id,$status, $tgl, $noSurat);
 		return redirect('admin/permohonan/view/stpw');
 	}
 
@@ -176,7 +181,8 @@ class PermohonanController extends Controller {
 		$id = Input::get('id');
 		$status = 'accepted';
 		$tgl = Carbon::now();
-		database::changeStatusITPMB($id,$status, $tgl);
+		$noSurat = 'ITPMB/'.$tgl->year.'/'.$tgl->month.'/'.$id;
+		database::changeStatusITPMB($id,$status, $tgl, $noSurat);
 		return redirect('admin/permohonan/view/itpmb');
 	}
 	public static function tolakIUTM(){

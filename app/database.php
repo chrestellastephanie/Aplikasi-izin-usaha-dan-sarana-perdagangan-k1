@@ -34,7 +34,7 @@ class database extends Model {
 				->get();
 	}
 	public static function getPermohonanITPMBbyId($id){
-		return DB::table('ppl_iusp_permohonanstpws')
+		return DB::table('ppl_iusp_permohonanitpmbs')
 				->where('id','=',$id)
 				->get();
 	}
@@ -53,31 +53,34 @@ class database extends Model {
 				->where('status','=','notProcessed')
 				->get();	
 	}
-	public static function changeStatusIUTM($id,$status,$tgl){
+	public static function changeStatusIUTM($id,$status,$tgl,$noIzin){
 		DB::table('ppl_iusp_permohonaniutms')
 				->where('id','=',$id)
 				->update(
 					[
 						'status' => $status,
 						'waktuPengajuan' => $tgl,
+						'nomorIzin' => $noIzin,
 					]);
 	}
-	public static function changeStatusSTPW($id,$status,$tgl){
+	public static function changeStatusSTPW($id,$status,$tgl,$noIzin){
 		DB::table('ppl_iusp_permohonanstpws')
 				->where('id','=',$id)
 				->update(
 					[
 						'status' => $status,
 						'waktuPengajuan' => $tgl,
+						'nomorIzin' => $noIzin,
 					]);
 	}
-	public static function changeStatusITPMB($id,$status,$tgl){
+	public static function changeStatusITPMB($id,$status,$tgl,$noIzin){
 		DB::table('ppl_iusp_permohonanitpmbs')
 				->where('id','=',$id)
 				->update(
 					[
 						'status' => $status,
 						'waktuPengajuan' => $tgl,
+						'nomorIzin' => $noIzin,
 					]);
 	}
 	public static function getDisetujuiIUTM(){

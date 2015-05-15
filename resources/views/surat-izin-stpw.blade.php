@@ -27,7 +27,7 @@ body {background-image: url('images/bandung.png');}
 		</div>
 
 			@foreach($stpw as $permohonan)
-				<div class="noIzin">Nomor izin : STPW/<?php echo date("Y/m"); ?>/{{$permohonan->id}}</div>
+				<div class="noIzin">Nomor izin : {{$permohonan->nomorIzin}}</div>
 				<br><br><br>
 			<div class="isi-stpw">
 				<table style="width:90%;">
