@@ -61,7 +61,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		</nav>
 		</div>
 		<ol class="breadcrumb">
-		  <li><a href="index.html">Home</a></li>
+		  <li><a href="/">Home</a></li>
 		  <li class="active">Form</li>
 		</ol>
 	</div>
