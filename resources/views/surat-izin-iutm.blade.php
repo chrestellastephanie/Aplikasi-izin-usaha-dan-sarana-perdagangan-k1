@@ -14,7 +14,7 @@ body {background-image: url('images/bandung.png');}
 	<div class="container">
 		<div class="kop">
 			<div class="kop-logo">
-				<img src="{{url('images/bandung.png')}}">
+				<img src="{{url('public/images/bandung.png')}}">
 			</div>
 			<div class="kop-namadinas">
 				<h3>PEMERINTAH PROVINSI KOTA BANDUNG</h3>
