@@ -49,17 +49,17 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			        	<li class="dropdown">
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Permohonan<span class="caret"></span></a>
 							<ul class="dropdown-menu" role="menu">
-								<li><a href="admin/permohonan/view/iutm">Permohonan IUTM, IUPP, IUPPT</a></li>
-								<li><a href="admin/permohonan/view/stpw">Permohonan STPW</a></li>
-								<li><a href="admin/permohonan/view/itpmb">Permohonan ITPMB</a></li>
+								<li><a href="http://e-gov-bandung.tk/iusp/public/admin/permohonan/view/iutm">Permohonan IUTM, IUPP, IUPPT</a></li>
+								<li><a href="http://e-gov-bandung.tk/iusp/public/admin/permohonan/view/stpw">Permohonan STPW</a></li>
+								<li><a href="http://e-gov-bandung.tk/iusp/public/admin/permohonan/view/itpmb">Permohonan ITPMB</a></li>
 							</ul>
 						</li>
 			        	<li class="dropdown">
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Surat Izin<span class="caret"></span></a>
 							<ul class="dropdown-menu" role="menu">
-								<li><a href="admin/izin/iutm">Izin IUTM, IUPP, IUPPT</a></li>
-								<li><a href="admin/izin/stpw">Izin STPW</a></li>
-								<li><a href="admin/izin/itpmb">Izin ITPMB</a></li>
+								<li><a href="http://e-gov-bandung.tk/iusp/public/admin/izin/iutm">Izin IUTM, IUPP, IUPPT</a></li>
+								<li><a href="http://e-gov-bandung.tk/iusp/public/admin/izin/stpw">Izin STPW</a></li>
+								<li><a href="http://e-gov-bandung.tk/iusp/public/admin/izin/itpmb">Izin ITPMB</a></li>
 							</ul>
 						</li>
 			        @if (Auth::guest())
