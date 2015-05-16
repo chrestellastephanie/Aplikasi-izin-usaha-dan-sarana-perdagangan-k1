@@ -5,11 +5,11 @@
 
 
 	@foreach ($stpw as $permohonan)
-	<form id="setuju" method="post" action="/admin/setujuSTPW">
+	<form id="setuju" method="post" action="/iusp/public/admin/setujuSTPW">
 		<input name="_token" hidden value="{!! csrf_token() !!}" />
 		<input type="hidden" name="id" value="{{$permohonan->id}}">	
 	</form>
-	<form id="tolak" method="post" action="/admin/tolakSTPW">
+	<form id="tolak" method="post" action="/iusp/public/admin/tolakSTPW">
 		<input name="_token" hidden value="{!! csrf_token() !!}" />
 		<input type="hidden" name="id" value="{{$permohonan->id}}">	
 	</form>
