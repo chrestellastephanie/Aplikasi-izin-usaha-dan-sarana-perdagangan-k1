@@ -32,7 +32,7 @@ Route::post('permohonan/ITPMBSuccess','PermohonanController@ajukan_ITPMB');
 Route::get('user-profile','UserProfileController@index');
 
 //login user
-Route::get('login','LoginController@login');
+Route::get('login','LoginController@UserLogin');
 
 
 // dinas
