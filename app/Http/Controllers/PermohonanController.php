@@ -58,7 +58,7 @@ class PermohonanController extends Controller {
 		$file = $request->file('suratKepemilikanTempat');
 		if ($request->hasFile('suratKepemilikanTempat')) { 
 			$filename = Carbon::now()->toDateString()."-". $request->get('namaPerusahaan').'-surat-kepemilikan-tempat'.'.'.$file->getClientOriginalExtension();
-			$destinationPath = public_path().'\\images\\'.'\\uploaded-image\\';
+			$destinationPath = public_path().'/images'.'/uploaded-image';
 			$request->file('suratKepemilikanTempat')->move($destinationPath, $filename);
 			$input['suratKepemilikanTempat'] = $filename;
 		}
@@ -66,7 +66,7 @@ class PermohonanController extends Controller {
 		$file = $request->file('aktaPendirianPerusahaan');
 		if ($request->hasFile('aktaPendirianPerusahaan')) { 
 			$filename = Carbon::now()->toDateString()."-". $request->get('namaPerusahaan').'-akta-pendirian-perusahaan'.'.'.$file->getClientOriginalExtension();
-			$destinationPath = public_path().'\\images\\'.'\\uploaded-image\\';
+			$destinationPath = public_path().'/images'.'/uploaded-image';
 			$request->file('aktaPendirianPerusahaan')->move($destinationPath, $filename);
 			$input['aktaPendirianPerusahaan'] = $filename;
 		}
@@ -74,7 +74,7 @@ class PermohonanController extends Controller {
 		$file = $request->file('domisili');
 		if ($request->hasFile('domisili')) { 
 			$filename = Carbon::now()->toDateString()."-". $request->get('namaPerusahaan').'-domisili'.'.'.$file->getClientOriginalExtension();
-			$destinationPath = public_path().'\\images\\'.'\\uploaded-image\\';
+			$destinationPath = public_path().'/images'.'/uploaded-image';
 			$request->file('domisili')->move($destinationPath, $filename);
 			$input['domisili'] = $filename;
 
@@ -83,14 +83,14 @@ class PermohonanController extends Controller {
 		$file = $request->file('amdal');
 		if ($request->hasFile('amdal')) { 
 			$filename = Carbon::now()->toDateString()."-". $request->get('namaPerusahaan').'-amdal'.'.'.$file->getClientOriginalExtension();
-			$destinationPath = public_path().'\\images\\'.'\\uploaded-image\\';
+			$destinationPath = public_path().'/images'.'/uploaded-image';
 			$request->file('amdal')->move($destinationPath, $filename);
 			$input['amdal'] = $filename;
 		}
 		$file = $request->file('rencanaMitra');
 		if ($request->hasFile('rencanaMitra')) { 
 			$filename = Carbon::now()->toDateString()."-". $request->get('namaPerusahaan').'-rencana mitra'.'.'.$file->getClientOriginalExtension();
-			$destinationPath = public_path().'\\images\\'.'\\uploaded-image\\';
+			$destinationPath = public_path().'/images'.'/uploaded-image';
 			$request->file('rencanaMitra')->move($destinationPath, $filename);
 			$input['rencanaMitra'] = $filename;
 		}
@@ -118,7 +118,7 @@ class PermohonanController extends Controller {
 		$file = $request->file('aktaPendirianPerusahaan');
 		if ($request->hasFile('aktaPendirianPerusahaan')) { 
 			$filename = Carbon::now()->toDateString()."-". $request->get('namaPerusahaan').'-akta-pendirian-perusahaan'.'.'.$file->getClientOriginalExtension();
-			$destinationPath = public_path().'/images/'.'/uploaded-image/';
+			$destinationPath = public_path().'/images'.'/uploaded-image';
 			$request->file('aktaPendirianPerusahaan')->move($destinationPath, $filename);
 			$input['aktaPendirianPerusahaan'] = $filename;
 		}
