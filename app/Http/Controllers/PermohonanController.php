@@ -118,7 +118,7 @@ class PermohonanController extends Controller {
 		$file = $request->file('aktaPendirianPerusahaan');
 		if ($request->hasFile('aktaPendirianPerusahaan')) { 
 			$filename = Carbon::now()->toDateString()."-". $request->get('namaPerusahaan').'-akta-pendirian-perusahaan'.'.'.$file->getClientOriginalExtension();
-			$destinationPath = public_path().'\\images\\'.'\\uploaded-image\\';
+			$destinationPath = public_path().'/images/'.'/uploaded-image/';
 			$request->file('aktaPendirianPerusahaan')->move($destinationPath, $filename);
 			$input['aktaPendirianPerusahaan'] = $filename;
 		}
