@@ -18,7 +18,7 @@ body {background-image: url('images/bandung.png');}
 			</div>
 			<div class="kop-namadinas">
 				<h3>PEMERINTAH PROVINSI KOTA BANDUNG</h3>
-				<h4>Dinas Koperasi, UKM dan Perindustrian Perdagangan</h4>
+				<h4>Badan Pelayanan Perizinan Terpadu</h4>
 			</div>
 			<hr>
 		</div>

@@ -10,7 +10,8 @@
 			<br>Nama:	
 			<br>ID KTP:
 			<br>No NPWP:
-
+			<br>Izin yang dimiliki : 
+			
 		</div>
 
 	</div>
