@@ -7,14 +7,14 @@
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 <style>
-body {background-image: url('images/bandung.png');}
+body {background-image: url('public/images/bandung.png');}
 </style>
 </head>
 <body>
 	<div class="container">
 		<div class="kop">
 			<div class="kop-logo">
-				<img src="{{url('images/bandung.png')}}">
+				<!-- <img src="{{url('images/bandung.png')}}"> -->
 			</div>
 			<div class="kop-namadinas">
 				<h3>PEMERINTAH PROVINSI KOTA BANDUNG</h3>
