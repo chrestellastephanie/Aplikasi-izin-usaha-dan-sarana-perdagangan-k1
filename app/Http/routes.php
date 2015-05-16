@@ -31,6 +31,9 @@ Route::post('permohonan/ITPMBSuccess','PermohonanController@ajukan_ITPMB');
 
 Route::get('user-profile','UserProfileController@index');
 
+//login user
+Route::get('login','LoginController@login');
+
 
 // dinas
 // Route::get('admin','SiteController@indexAdminView');
