@@ -160,7 +160,9 @@ class PermohonanController extends Controller {
 		// $iutm = database::getPermohonanIUTMbyId($id);
 		// $pdf = \PDF::loadView('surat-izin-iutm',compact('iutm'));
         // return $pdf->download("tes.pdf"); //kasih nama sesuai no izinnya -> ntar diganti sama save pdf nya aja
-		PermohonanController::sendMail('m2t.math@gmail.com', 'accepted', $noSurat);
+		$permohonan = database::getPermohonanIUTMbyId($id);
+		$pemohon = database::getKTPID($permohonan['direkturPerusahaan']);
+		PermohonanController::sendMail($pemohon['email'], 'accepted', $noSurat);
 
 		return redirect('admin/permohonan/view/iutm'); // balik ke halaman awal
 	}
@@ -171,7 +173,10 @@ class PermohonanController extends Controller {
 		$tgl = Carbon::now();
 		$noSurat = 'STPW/'.$tgl->year.'/'.$tgl->month.'/'.$id;
 		database::changeStatusSTPW($id,$status, $tgl, $noSurat);
-		PermohonanController::sendMail('m2t.math@gmail.com', 'accepted', $noSurat);
+		
+		$permohonan = database::getPermohonanSTPWbyId($id);
+		$pemohon = database::getKTPID($permohonan['direkturPerusahaan']);
+		PermohonanController::sendMail($pemohon['email'], 'accepted', $noSurat);
 
 		return redirect('admin/permohonan/view/stpw');
 	}
@@ -182,17 +187,24 @@ class PermohonanController extends Controller {
 		$tgl = Carbon::now();
 		$noSurat = 'ITPMB/'.$tgl->year.'/'.$tgl->month.'/'.$id;
 		database::changeStatusITPMB($id,$status, $tgl, $noSurat);
-		PermohonanController::sendMail('m2t.math@gmail.com', 'accepted', $noSurat);
+		
+		$permohonan = database::getPermohonanITPMBbyId($id);
+		$pemohon = database::getKTPID($permohonan['direkturPerusahaan']);
+		PermohonanController::sendMail($pemohon['email'], 'accepted', $noSurat);
 
 		return redirect('admin/permohonan/view/itpmb');
 	}
+
 	public static function tolakIUTM(){
 		$id = Input::get('id');
 		$status = 'rejected';
 		$tgl = Carbon::now();
 		$noSurat = "-";
 		database::changeStatusIUTM($id,$status, $tgl,$noSurat);
-		PermohonanController::sendMail('m2t.math@gmail.com', 'rejected', $noSurat);
+		
+		$permohonan = database::getPermohonanIUTMbyId($id);
+		$pemohon = database::getKTPID($permohonan['direkturPerusahaan']);
+		PermohonanController::sendMail($pemohon['email'], 'rejected', $noSurat);
 
 		return redirect('admin/permohonan/view/iutm');
 	}
@@ -202,7 +214,10 @@ class PermohonanController extends Controller {
 		$tgl = Carbon::now();
 		$noSurat = "-";
 		database::changeStatusSTPW($id,$status, $tgl, $noSurat);
-		PermohonanController::sendMail('m2t.math@gmail.com', 'rejected', $noSurat);
+		
+		$permohonan = database::getPermohonanSTPWbyId($id);
+		$pemohon = database::getKTPID($permohonan['direkturPerusahaan']);
+		PermohonanController::sendMail($pemohon['email'], 'rejected', $noSurat);
 
 		return redirect('admin/permohonan/view/stpw');
 	}
@@ -212,7 +227,10 @@ class PermohonanController extends Controller {
 		$tgl = Carbon::now();
 		$noSurat = "-";
 		database::changeStatusITPMB($id,$status, $tgl,$noSurat);
-		PermohonanController::sendMail('m2t.math@gmail.com', 'rejected', $noSurat);
+		
+		$permohonan = database::getPermohonanITPMBbyId($id);
+		$pemohon = database::getKTPID($permohonan['direkturPerusahaan']);
+		PermohonanController::sendMail($pemohon['email'], 'rejected', $noSurat);
 
 		return redirect('admin/permohonan/view/itpmb');
 	}
