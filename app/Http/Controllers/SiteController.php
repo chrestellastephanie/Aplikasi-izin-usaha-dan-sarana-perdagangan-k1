@@ -18,8 +18,10 @@ class SiteController extends Controller {
 	}
 	public function showBerkasIUTM($id){
 		$iutm = database::getPermohonanIUTMbyId($id);
-		$iduser=Input::get('iduser');
-		$noktp=database::getKTPID($iduser);
+		foreach ($iutm as $izin){
+			$idpemilik = $izin->direkturPerusahaan;
+		}
+		$noktp=database::getKTPID($idpemilik);
 		foreach($noktp as $ktp){
 			$noNPWP = database::getNPWP($ktp->nik);
 		}
@@ -27,8 +29,10 @@ class SiteController extends Controller {
 	}
 	public function showBerkasSTPW($id){
 		$stpw = database::getPermohonanSTPWbyId($id);
-		$iduser=Input::get('iduser');
-		$noktp=database::getKTPID($iduser);
+		foreach ($stpw as $izin){
+			$idpemilik = $izin->direkturPerusahaan;
+		}
+		$noktp=database::getKTPID($idpemilik);
 		foreach($noktp as $ktp){
 			$noNPWP = database::getNPWP($ktp->nik);
 		}
@@ -36,8 +40,10 @@ class SiteController extends Controller {
 	}
 	public function showBerkasITPMB($id){
 		$itpmb = database::getPermohonanITPMBbyId($id);
-		$iduser=Input::get('iduser');
-		$noktp=database::getKTPID($iduser);
+		foreach ($itpmb as $izin){
+			$idpemilik = $izin->direkturPerusahaan;
+		}
+		$noktp=database::getKTPID($idpemilik);
 		foreach($noktp as $ktp){
 			$noNPWP = database::getNPWP($ktp->nik);
 		}
