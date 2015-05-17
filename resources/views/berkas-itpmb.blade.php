@@ -31,7 +31,7 @@
 			<tr>
 				<td style="width:1%;"><input type="checkbox" name="KepemilikanTempatValid" value="valid"></td>
 				<td style="width:20%;">HO</td>
-				<td style="width:40%;">cek dari yang lain</td>
+				<td style="width:40%;">HO/2015/4/2</td>
 			</tr>
 			<tr>
 				<td style="width:1%;"><input type="checkbox" name="KepemilikanTempatValid" value="valid"></td>

@@ -136,35 +136,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				<p>Phone:(022) 730 83 58</p>
 				<p>Fax: (022) 730 83 58</p>
 			</div>
-			<div class="col-md-3 span1_of_4">
-				<h4>latest posts</h4>
-				<span><a href="#"> Fusce scelerisque massa vitae </a></span>
-				<p>25 april 2013</p>
-				<span><a href="#">Pellentesque bibendum ante </a></span>
-				<p>15 march 2013</p>
-				<span><a href="#">Maecenas quis ipsum sed magna </a></span>
-				<p>25 april 2013</p>
-			</div>
-			<div class="col-md-3 span1_of_4">
-				<h4>latest comments</h4>
-				<span><a href="#">It is a long established fact that a reader will looking layout.</a></span>
-				<span><a href="#">There are many variations of passages of Lorem Ipsum available words.</a></span>
-				<span><a href="#">It is a long established fact that a reader will looking layout.</a></span>
-			</div>
-			<div class="col-md-3 span1_of_4">
-				<h4>photostream</h4>
-				<ul class="f_nav list-unstyled">
-					<li><a href="#"><img src="images/f_pic1.jpg" alt="" class="img-responsive"/></a></li>
-					<li><a href="#"><img src="images/f_pic3.jpg" alt="" class="img-responsive"/> </a></li>
-					<li><a href="#"><img src="images/f_pic4.jpg" alt="" class="img-responsive"/> </a></li>
-					<li><a href="#"><img src="images/f_pic5.jpg" alt="" class="img-responsive"/> </a></li>
-					<li><a href="#"><img src="images/f_pic7.jpg" alt="" class="img-responsive"/> </a></li>
-					<li><a href="#"><img src="images/f_pic1.jpg" alt="" class="img-responsive"/> </a></li>
-					<li><a href="#"><img src="images/f_pic6.jpg" alt="" class="img-responsive"/> </a></li>
-					<li><a href="#"><img src="images/f_pic8.jpg" alt="" class="img-responsive"/> </a></li>
-					<li><a href="#"><img src="images/f_pic2.jpg" alt="" class="img-responsive"/> </a></li>
-				</ul>
-			</div>
 			<div class="clearfix"></div>
 		</div>
 	</div>

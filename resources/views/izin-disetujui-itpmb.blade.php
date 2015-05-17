@@ -1,7 +1,7 @@
 @extends('page-admin')
 
 @section ('content')
-	<h1>Daftar permohonan : </h1>
+	<h1>Izin : </h1>
 	<h2>ITPMB</h2>
 	<ul>
 	@foreach ($itpmb as $mohon)
