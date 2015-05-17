@@ -166,7 +166,7 @@ class PermohonanController extends Controller {
 		foreach($permohonan as $p){
 			$iduser = $p->direkturPerusahaan;
 		}
-		$noktp = database::getKTPID($id);
+		$noktp = database::getKTPID($iduser);
 		foreach($noktp as $ktp){
 			$email = $ktp->email;
 		}
@@ -187,7 +187,7 @@ class PermohonanController extends Controller {
 		foreach($permohonan as $p){
 			$iduser = $p->direkturPerusahaan;
 		}
-		$noktp = database::getKTPID($id);
+		$noktp = database::getKTPID($iduser);
 		foreach($noktp as $ktp){
 			$email = $ktp->email;
 		}
@@ -208,7 +208,7 @@ class PermohonanController extends Controller {
 		foreach($permohonan as $p){
 			$iduser = $p->direkturPerusahaan;
 		}
-		$noktp = database::getKTPID($id);
+		$noktp = database::getKTPID($iduser);
 		foreach($noktp as $ktp){
 			$email = $ktp->email;
 		}
@@ -229,7 +229,7 @@ class PermohonanController extends Controller {
 		foreach($permohonan as $p){
 			$iduser = $p->direkturPerusahaan;
 		}
-		$noktp = database::getKTPID($id);
+		$noktp = database::getKTPID($iduser);
 		foreach($noktp as $ktp){
 			$email = $ktp->email;
 		}
@@ -249,7 +249,7 @@ class PermohonanController extends Controller {
 		foreach($permohonan as $p){
 			$iduser = $p->direkturPerusahaan;
 		}
-		$noktp = database::getKTPID($id);
+		$noktp = database::getKTPID($iduser);
 		foreach($noktp as $ktp){
 			$email = $ktp->email;
 		}
@@ -269,7 +269,7 @@ class PermohonanController extends Controller {
 		foreach($permohonan as $p){
 			$iduser = $p->direkturPerusahaan;
 		}
-		$noktp = database::getKTPID($id);
+		$noktp = database::getKTPID($iduser);
 		foreach($noktp as $ktp){
 			$email = $ktp->email;
 		}
