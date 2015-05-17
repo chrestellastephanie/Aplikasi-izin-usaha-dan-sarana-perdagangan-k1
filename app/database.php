@@ -121,4 +121,9 @@ class database extends Model {
 				->where('id','=',$id)
 				->get();
 	}
+	public static function getNPWP($noktp){
+		return DB::table('ppl_pajak_wajib_pajak')
+				->where('no_ktp_pemilik','=',$noktp)
+				->get();
+	}
 }
