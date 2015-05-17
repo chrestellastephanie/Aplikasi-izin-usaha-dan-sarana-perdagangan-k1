@@ -218,7 +218,26 @@ class PermohonanController extends Controller {
 	}
 	public static function perpanjangIUTM(){
 		$id = Input::get('id');
-		$status = 'perpanjang';
-		
+		$status = 'accepted';
+		$tgl = Carbon::now();
+		$noSurat = 'ITPMB/'.$tgl->year.'/'.$tgl->month.'/'.$id;
+		database::changeStatusIUTM($id,$status, $tgl, $noSurat);
+		return redirect('home');
+	}
+	public static function perpanjangSTPW(){
+		$id = Input::get('id');
+		$status = 'accepted';
+		$tgl = Carbon::now();
+		$noSurat = 'STPW/'.$tgl->year.'/'.$tgl->month.'/'.$id;
+		database::changeStatusSTPW($id,$status, $tgl, $noSurat);
+		return redirect('home');
+	}
+	public static function perpanjangIUTM(){
+		$id = Input::get('id');
+		$status = 'accepted';
+		$tgl = Carbon::now();
+		$noSurat = 'ITPMB/'.$tgl->year.'/'.$tgl->month.'/'.$id;
+		database::changeStatusITPMB($id,$status, $tgl, $noSurat);
+		return redirect('home');
 	}
 }
