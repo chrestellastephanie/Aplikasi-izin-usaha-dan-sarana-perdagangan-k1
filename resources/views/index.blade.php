@@ -92,7 +92,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						<h2>Mau buat usaha?</h2>
 						<h3>Daftar dulu yuk!</h3><br>
 						<a href="#pilihanIzin"><button class="btn_style">Ajukan Izin</button></a> &nbsp;
-						<a href="user-profile"><button class="btn_style">Perpanjang izin</button></a>
+						<a href="user-profile/{{$idlogin}}?id={{$idlogin}}"><button class="btn_style">Perpanjang izin</button></a>
 					</div>
 				</div>
 				<div class="col-md-4">
