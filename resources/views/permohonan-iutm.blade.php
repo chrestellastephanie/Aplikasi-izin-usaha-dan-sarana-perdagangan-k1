@@ -1,11 +1,6 @@
 @extends('page-admin')
 
 @section('content')
-<!-- get id yang login -->
-	<?php 
-		$idlogin= $_GET['id'];
-		echo $idlogin;
-	?>
 	<h1>Daftar permohonan : </h1>
 	<h3>IUTM-IUPP-IUPPT</h3>
 	<ul>
@@ -21,12 +16,7 @@
 					</li>
 				</div>
 				<div class="col-md-3">
-					<form id="cekberkas" method="post" action="/iusp/public/admin/permohonan/view/berkasIUTM/{{$mohon->id}}">
-						<input name="_token" hidden value="{!! csrf_token() !!}" />
-						<input type="hidden" name="id" value="{{$permohonan->id}}">	
-						<input type="hidden" name="iduser" value="{{$idlogin}}">
-					</form>
-					<button form="cekberkas" class="btn2 btn_style">cek berkas</button>
+					<a href="berkasIUTM/{{$mohon->id}}"><button class="btn2 btn_style">cek berkas</button></a>					
 				</div>
 			</div>
 		</div>
