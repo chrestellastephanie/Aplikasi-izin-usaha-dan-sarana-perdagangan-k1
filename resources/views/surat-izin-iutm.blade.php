@@ -37,11 +37,7 @@ body {background-image: url('images/bandung.png');}
 						<td style="width:3%;">:</td>
 						<td>{{$permohonan->namaPerusahaan}}</td>
 					</tr>
-					<tr>
-						<td style="width:40%;">Nama Penanggung Jawab</td>
-						<td style="width:3%;">:</td>
-						<td>{{$permohonan->direkturPerusahaan}}</td>
-					</tr><br>
+					<br>
 					<tr>
 						<td style="width:40%;">Alamat Perusahaan</td>
 						<td style="width:3%;">:</td>
