@@ -11,7 +11,7 @@
 			<br>ID KTP:
 			<br>No NPWP:
 			<br>Izin yang dimiliki : 
-				@foreach($izinUTM as $iutm)
+				@foreach($izinIUTM as $iutm)
 					$iutm->nomorIzin
 				@endforeach
 				@foreach($izinSTPW as $stpw)
