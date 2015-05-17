@@ -33,6 +33,7 @@ Route::get('user-profile','UserProfileController@index');
 
 //login user
 Route::get('login','LoginController@UserLogin');
+Route::post('login','LoginController@LoginSuccess');
 
 
 // dinas
