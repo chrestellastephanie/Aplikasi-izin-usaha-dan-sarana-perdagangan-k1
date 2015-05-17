@@ -31,6 +31,11 @@ Route::post('permohonan/ITPMBSuccess','PermohonanController@ajukan_ITPMB');
 
 Route::get('user-profile/{id}','UserProfileController@index');
 
+Route::post('perpanjangIUTM','PermohonanController@setujuIUTM');
+Route::post('perpanjangSTPW','PermohonanController@setujuSTPW');
+Route::post('perpanjangITPMB','PermohonanController@setujuITPMB');
+
+
 //login user
 Route::get('login','LoginController@UserLogin');
 Route::post('login','LoginController@LoginSuccess');

@@ -216,4 +216,9 @@ class PermohonanController extends Controller {
 		$itpmb = database::getDisetujuiITPMB();
 		return view ('izin-disetujui-itpmb', compact('itpmb'));
 	}
+	public static function perpanjangIUTM(){
+		$id = Input::get('id');
+		$status = 'perpanjang';
+		
+	}
 }

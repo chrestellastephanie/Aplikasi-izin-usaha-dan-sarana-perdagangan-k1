@@ -4,16 +4,23 @@
 	<h1>User's Profile</h1>
 	<div class="biodata">
 		<div class="col-md-9 lead">
+
+
+
 			 @foreach($noKTP as $ktpID)
-			<br>Nama: {{$ktpID->nama}}
-			<br>ID KTP: {{$ktpID->nik}}
-			<br>email: {{$ktpID->email}}
+			<br><b>Nama:</b> {{$ktpID->nama}}
+			<br><b>ID KTP:</b> {{$ktpID->nik}}
+			<br><b>email:</b> {{$ktpID->email}}
 			@endforeach
 			<br>
 			<br>No NPWP: 
-			<br>Izin yang dimiliki : <br>
+			<br><b>Izin yang dimiliki :</b> <br>
 				@foreach($izinIUTM as $iutm)
-					{{$iutm->nomorIzin}} <button>perpanjang</button>
+				<form id="perpanjang" method="post" action="/iusp/public/perpanjangIUTM">
+					<input name="_token" hidden value="{!! csrf_token() !!}" />
+					<input type="hidden" name="id" value="{{$iutm->id}}">	
+				</form>
+					{{$iutm->nomorIzin}} <button class="btn btn_style" form="perpanjang">perpanjang</button>
 				@endforeach
 				@foreach($izinSTPW as $stpw)
 					{{$stpw->nomorIzin}} <button>perpanjang</button>
