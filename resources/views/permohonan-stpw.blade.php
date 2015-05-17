@@ -1,6 +1,11 @@
 @extends('page-admin')
 
 @section('content')
+	<!-- get id yang login -->
+	<?php 
+		$idlogin= $_GET['id'];
+		echo $idlogin;
+	?>
 	<h1>Daftar permohonan : </h1>
 	<h2>STPW</h2>
 	<ul>
@@ -16,7 +21,7 @@
 					</li>
 				</div>
 				<div class="col-md-3">
-					<a href="berkasSTPW/{{$mohon->id}}?id={{$mohon->id}}"><button class="btn2 btn_style">cek berkas</button></a>
+					<a href="berkasSTPW/{{$mohon->id}}?id=$idlogin"><button class="btn2 btn_style">cek berkas</button></a>
 				</div>
 			</div>
 		</div>

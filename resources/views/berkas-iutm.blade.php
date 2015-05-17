@@ -1,6 +1,7 @@
 @extends('page-admin')
 
 @section('content')
+
 <h2> Berkas IUTM, IUPP, IUPPT</h2><br><br>
 
 
