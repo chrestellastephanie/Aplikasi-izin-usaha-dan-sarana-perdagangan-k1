@@ -21,7 +21,12 @@
 					</li>
 				</div>
 				<div class="col-md-3">
-					<a href="berkasIUTM/{{$mohon->id}}?id=$idlogin"><button class="btn2 btn_style">cek berkas</button></a>					
+					<form id="cekberkas" method="post" action="/iusp/public/admin/permohonan/view/berkasIUTM/{{$mohon->id}}">
+						<input name="_token" hidden value="{!! csrf_token() !!}" />
+						<input type="hidden" name="id" value="{{$permohonan->id}}">	
+						<input type="hidden" name="iduser" value="{{$idlogin}}">
+					</form>
+					<button form="cekberkas" class="btn2 btn_style">cek berkas</button>
 				</div>
 			</div>
 		</div>

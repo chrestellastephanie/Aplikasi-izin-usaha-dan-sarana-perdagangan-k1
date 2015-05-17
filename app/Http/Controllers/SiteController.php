@@ -3,7 +3,7 @@
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\database;
-
+use Input;
 
 use Illuminate\Http\Request;
 
@@ -18,15 +18,30 @@ class SiteController extends Controller {
 	}
 	public function showBerkasIUTM($id){
 		$iutm = database::getPermohonanIUTMbyId($id);
-		return view ('berkas-iutm',compact('iutm'));
+		$iduser=Input::get('iduser');
+		$noktp=database::getKTPID($iduser);
+		foreach($noKTP as $ktp){
+			$noNPWP = database::getNPWP($ktp->nik);
+		}
+		return view ('berkas-iutm',compact('iutm','noNPWP'));
 	}
 	public function showBerkasSTPW($id){
 		$stpw = database::getPermohonanSTPWbyId($id);
-		return view ('berkas-stpw',compact('stpw'));
+		$iduser=Input::get('iduser');
+		$noktp=database::getKTPID($iduser);
+		foreach($noKTP as $ktp){
+			$noNPWP = database::getNPWP($ktp->nik);
+		}
+		return view ('berkas-stpw',compact('stpw','noNPWP'));
 	}
 	public function showBerkasITPMB($id){
 		$itpmb = database::getPermohonanITPMBbyId($id);
-		return view ('berkas-itpmb',compact('itpmb'));
+		$iduser=Input::get('iduser');
+		$noktp=database::getKTPID($iduser);
+		foreach($noKTP as $ktp){
+			$noNPWP = database::getNPWP($ktp->nik);
+		}
+		return view ('berkas-itpmb',compact('itpmb','noNPWP'));
 	}
 	
 	public function showPermohonanIUTM(){

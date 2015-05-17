@@ -49,9 +49,9 @@ Route::get('admin/permohonan/view/stpw','SiteController@showPermohonanSTPW');
 Route::get('admin/permohonan/view/itpmb','SiteController@showPermohonanITPMB');
 
 // Route::get('admin/permohonan/berkasIUTM','PermohonanController@berkasIUTMView');
-Route::get('admin/permohonan/view/berkasIUTM/{id}','SiteController@showBerkasIUTM');
-Route::get('admin/permohonan/view/berkasSTPW/{id}','SiteController@showBerkasSTPW');
-Route::get('admin/permohonan/view/berkasITPMB/{id}','SiteController@showBerkasITPMB');
+Route::post('admin/permohonan/view/berkasIUTM/{id}','SiteController@showBerkasIUTM');
+Route::post('admin/permohonan/view/berkasSTPW/{id}','SiteController@showBerkasSTPW');
+Route::post('admin/permohonan/view/berkasITPMB/{id}','SiteController@showBerkasITPMB');
 
 Route::post('admin/setujuIUTM','PermohonanController@setujuIUTM'); //ubah status aja
 // Route::post('admin/setujuIUTM','PermohonanController@setujuIUTM'); //bikin pdf
