@@ -4,16 +4,13 @@
 	<h1>User's Profile</h1>
 	<div class="biodata">
 		<div class="col-md-9 lead">
-
-
-
 			 @foreach($noKTP as $ktpID)
 			<br><b>Nama:</b> {{$ktpID->nama}}
 			<br><b>ID KTP:</b> {{$ktpID->nik}}
 			<br><b>email:</b> {{$ktpID->email}}
 			
 			<br>
-			<br>No NPWP: @foreach($noNPWP as $npwp)
+			<br><b>No NPWP:</b> @foreach($noNPWP as $npwp)
 				{{$npwp->npwpd}}
 			@endforeach
 			<br><b>Izin yang dimiliki :</b> <br>
@@ -39,7 +36,6 @@
 					<input name="_token" hidden value="{!! csrf_token() !!}" />
 					<input type="hidden" name="id" value="{{$itpmb->id}}">	
 					<input type="hidden" name="ktp" value="{{$ktpID->id}}">
-
 				</form>
 					{{$itpmb->nomorIzin}} <button class="btn btn_style" form="perpanjang">perpanjang</button>
 				@endforeach
