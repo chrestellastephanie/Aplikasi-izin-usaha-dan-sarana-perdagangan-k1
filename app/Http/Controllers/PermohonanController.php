@@ -232,7 +232,7 @@ class PermohonanController extends Controller {
 		database::changeStatusSTPW($id,$status, $tgl, $noSurat);
 		return redirect('home');
 	}
-	public static function perpanjangIUTM(){
+	public static function perpanjangITPMB(){
 		$id = Input::get('id');
 		$status = 'accepted';
 		$tgl = Carbon::now();
