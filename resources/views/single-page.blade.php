@@ -28,7 +28,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 </head>
 <body>
 	<?php 
-		$idlogin= $_GET['id'];
+		// $idlogin= $_GET['id'];
 	?>
 <div class="header_bg"><!-- start header -->
 	<div class="container">
