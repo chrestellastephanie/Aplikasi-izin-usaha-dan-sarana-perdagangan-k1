@@ -151,7 +151,7 @@ class PermohonanController extends Controller {
 		} );
 	}
 
-	public function setujuIUTM(){
+	public  setujuIUTM(){
 		$id = Input::get('id');
 		$status = 'accepted';
 		$tgl = Carbon::now();
@@ -176,7 +176,7 @@ class PermohonanController extends Controller {
 		return redirect('admin/permohonan/view/iutm'); // balik ke halaman awal
 	}
 
-	public static function setujuSTPW(){
+	public  function setujuSTPW(){
 		$id = Input::get('id');
 		$status = 'accepted';
 		$tgl = Carbon::now();
@@ -197,7 +197,7 @@ class PermohonanController extends Controller {
 		return redirect('admin/permohonan/view/stpw');
 	}
 
-	public static function setujuITPMB(){
+	public  function setujuITPMB(){
 		$id = Input::get('id');
 		$status = 'accepted';
 		$tgl = Carbon::now();
@@ -218,7 +218,7 @@ class PermohonanController extends Controller {
 		return redirect('admin/permohonan/view/itpmb');
 	}
 
-	public static function tolakIUTM(){
+	public  function tolakIUTM(){
 		$id = Input::get('id');
 		$status = 'rejected';
 		$tgl = Carbon::now();
@@ -238,7 +238,7 @@ class PermohonanController extends Controller {
 
 		return redirect('admin/permohonan/view/iutm');
 	}
-	public static function tolakSTPW(){
+	public  function tolakSTPW(){
 		$id = Input::get('id');
 		$status = 'rejected';
 		$tgl = Carbon::now();
@@ -258,7 +258,7 @@ class PermohonanController extends Controller {
 
 		return redirect('admin/permohonan/view/stpw');
 	}
-	public static function tolakITPMB(){
+	public  function tolakITPMB(){
 		$id = Input::get('id');
 		$status = 'rejected';
 		$tgl = Carbon::now();
