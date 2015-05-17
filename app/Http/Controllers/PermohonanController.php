@@ -151,7 +151,7 @@ class PermohonanController extends Controller {
 		} );
 	}
 
-	public  setujuIUTM(){
+	public function setujuIUTM(){
 		$id = Input::get('id');
 		$status = 'accepted';
 		$tgl = Carbon::now();
