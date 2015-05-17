@@ -49,6 +49,20 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		         <li><a href="user-profile">user profile</a></li>
 		         <li><a href="#">about us</a></li>
 		        <li><a href="#">portal application</a></li>
+                  <li><a href="/">Logout</a></li>
+                  <script type="text/javascript">
+                      $('#logoutLink').click(function(e) {
+                          $.ajax({
+                              type: 'get',
+                              url: 'http://e-gov-bandung.tk/dukcapil/api/public/auth/logout',
+                              success: function(data) {
+                              },
+                              error: function(data) {
+                                  // alert(data);
+                              }
+                          });
+                      })
+                  </script>
 		      </ul>
 		      <!-- <form class="navbar-form navbar-right" role="search">
 		        <div class="form-group my_search">
