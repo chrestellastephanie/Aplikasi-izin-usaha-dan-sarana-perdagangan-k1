@@ -187,21 +187,24 @@ class PermohonanController extends Controller {
 		$id = Input::get('id');
 		$status = 'rejected';
 		$tgl = Carbon::now();
-		database::changeStatusIUTM($id,$status, $tgl);
+		$noSurat = "-";
+		database::changeStatusIUTM($id,$status, $tgl,$noSurat);
 		return redirect('admin/permohonan/view/iutm');
 	}
 	public static function tolakSTPW(){
 		$id = Input::get('id');
 		$status = 'rejected';
 		$tgl = Carbon::now();
-		database::changeStatusSTPW($id,$status, $tgl);
+		$noSurat = "-";
+		database::changeStatusSTPW($id,$status, $tgl, $noSurat);
 		return redirect('admin/permohonan/view/stpw');
 	}
 	public static function tolakITPMB(){
 		$id = Input::get('id');
 		$status = 'rejected';
 		$tgl = Carbon::now();
-		database::changeStatusITPMB($id,$status, $tgl);
+		$noSurat = "-";
+		database::changeStatusITPMB($id,$status, $tgl,$noSurat);
 		return redirect('admin/permohonan/view/itpmb');
 	}
 	public static function showAcceptedIUTM(){
