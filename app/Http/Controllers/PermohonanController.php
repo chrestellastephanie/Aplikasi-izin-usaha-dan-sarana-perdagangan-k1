@@ -137,12 +137,12 @@ class PermohonanController extends Controller {
 		return view ('berkas-itpmb');
 	}
 
-	public function sendMail($email, $status) //$name, $email, $id_permohonan, $status)
+	public function sendMail($email, $status, $noSurat)
 	{
 		$data = [];
 		$data['name'] = 'Warga Kota Bandung';
 		$data['status'] = $status;
-		$data['id_permohonan'] = 1;
+		$data['noSurat'] = $noSurat;
 
 		// kirim email
 		Mail::send('emailing.mail', $data, function($message) use ($email) {
@@ -153,7 +153,6 @@ class PermohonanController extends Controller {
 
 	public function setujuIUTM(){
 		$id = Input::get('id');
-		$status = 'accepted';
 		$tgl = Carbon::now();
 		$noSurat = 'IUTM-IUPP-IUPPT/'.$tgl->year.'/'.$tgl->month.'/'.$id;
 		database::changeStatusIUTM($id,$status, $tgl, $noSurat);
@@ -161,7 +160,7 @@ class PermohonanController extends Controller {
 		// $iutm = database::getPermohonanIUTMbyId($id);
 		// $pdf = \PDF::loadView('surat-izin-iutm',compact('iutm'));
         // return $pdf->download("tes.pdf"); //kasih nama sesuai no izinnya -> ntar diganti sama save pdf nya aja
-		PermohonanController::sendMail('m2t.math@gmail.com', $status);
+		PermohonanController::sendMail('m2t.math@gmail.com', 'accepted', $noSurat);
 
 		return redirect('admin/permohonan/view/iutm'); // balik ke halaman awal
 	}
@@ -172,6 +171,8 @@ class PermohonanController extends Controller {
 		$tgl = Carbon::now();
 		$noSurat = 'STPW/'.$tgl->year.'/'.$tgl->month.'/'.$id;
 		database::changeStatusSTPW($id,$status, $tgl, $noSurat);
+		PermohonanController::sendMail('m2t.math@gmail.com', 'accepted', $noSurat);
+
 		return redirect('admin/permohonan/view/stpw');
 	}
 
@@ -181,6 +182,8 @@ class PermohonanController extends Controller {
 		$tgl = Carbon::now();
 		$noSurat = 'ITPMB/'.$tgl->year.'/'.$tgl->month.'/'.$id;
 		database::changeStatusITPMB($id,$status, $tgl, $noSurat);
+		PermohonanController::sendMail('m2t.math@gmail.com', 'accepted', $noSurat);
+
 		return redirect('admin/permohonan/view/itpmb');
 	}
 	public static function tolakIUTM(){
@@ -189,6 +192,8 @@ class PermohonanController extends Controller {
 		$tgl = Carbon::now();
 		$noSurat = "-";
 		database::changeStatusIUTM($id,$status, $tgl,$noSurat);
+		PermohonanController::sendMail('m2t.math@gmail.com', 'rejected', $noSurat);
+
 		return redirect('admin/permohonan/view/iutm');
 	}
 	public static function tolakSTPW(){
@@ -197,6 +202,8 @@ class PermohonanController extends Controller {
 		$tgl = Carbon::now();
 		$noSurat = "-";
 		database::changeStatusSTPW($id,$status, $tgl, $noSurat);
+		PermohonanController::sendMail('m2t.math@gmail.com', 'rejected', $noSurat);
+
 		return redirect('admin/permohonan/view/stpw');
 	}
 	public static function tolakITPMB(){
@@ -205,6 +212,8 @@ class PermohonanController extends Controller {
 		$tgl = Carbon::now();
 		$noSurat = "-";
 		database::changeStatusITPMB($id,$status, $tgl,$noSurat);
+		PermohonanController::sendMail('m2t.math@gmail.com', 'rejected', $noSurat);
+
 		return redirect('admin/permohonan/view/itpmb');
 	}
 	public static function showAcceptedIUTM(){
