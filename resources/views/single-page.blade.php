@@ -27,6 +27,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
 </head>
 <body>
+	<?php 
+		$idlogin= $_GET['id'];
+	?>
 <div class="header_bg"><!-- start header -->
 	<div class="container">
 		<div class="row header">
