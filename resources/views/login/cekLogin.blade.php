@@ -16,7 +16,7 @@
                     var url = "{{url()}}/home?id="+data;
                     window.location.href = url;
                 } else { //redirect ke alamat login kalian
-                    var url = "{{url()}}/login"
+                    var url = "http://e-gov-bandung.tk/portal/public/login"
                     window.location.href = url
                 }
             },
