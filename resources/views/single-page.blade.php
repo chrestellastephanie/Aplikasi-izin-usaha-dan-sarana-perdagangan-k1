@@ -96,19 +96,14 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					Aplikasi ini dibuat untuk mempermudah warga Kota Bandung untuk mengajukan permohonan izin usaha dan sarana perdagangan. Aplikasi ini mengurangi jumlah berkas yang harus diberikan pemohon dan mempersingkat jalur birokrasi.
 				</p>
 				<h5>Address</h5>
+
+			</div>
+			<div class="col-md-3 span1_of_4">
+				<h4>Address</h4>
 				<p class="top">Dinas Koperasi, UKM dan Perindustrian Perdagangan</p>
 				<p>Jl. Kawaluyaan No. 2 Bandung</p>
 				<p>Phone:(022) 730 83 58</p>
 				<p>Fax: (022) 730 83 58</p>
-			</div>
-			<div class="col-md-3 span1_of_4">
-				<h4>latest posts</h4>
-				<span><a href="#"> Fusce scelerisque massa vitae </a></span>
-				<p>25 april 2013</p>
-				<span><a href="#">Pellentesque bibendum ante </a></span>
-				<p>15 march 2013</p>
-				<span><a href="#">Maecenas quis ipsum sed magna </a></span>
-				<p>25 april 2013</p>
 			</div>
 			<div class="col-md-3 span1_of_4">
 				<h4>latest comments</h4>
