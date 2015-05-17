@@ -116,7 +116,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					  <img src="images/icon1.png" class="img-responsive"/>
 					  <p>IUTM,IUPP, dan IUPPT adalah izin untuk dapat melaksanakan usaha pusat perbelanjaan dan toko modern yang diterbitkan oleh pemerintah Kota Bandung</p>
 				     <div class="rd_more1">
-						<a href="permohonan/ajukan-IUTM-IUPP-IUPPT"><button class="btn_style">Ajukan Izin</button></a>
+						<a href="permohonan/ajukan-IUTM-IUPP-IUPPT?id={{$idlogin}}"><button class="btn_style">Ajukan Izin</button></a>
 					</div>					
 				</div>
 				<div class="col-md-4 grid1_of_3">
@@ -124,7 +124,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					  <img src="images/icon2.png" class="img-responsive"/>
 					  <p>ITPMB adalah izin tertulis yang diterbitkan oleh pemerintah Kota Bandung untuk tempat penjualan minuman beralkohol kepada orang atau badan yang akan melakukan penjualan minuman beralkohol</p>
 				      <div class="rd_more1">
-						<a href="permohonan/ajukan-ITPMB"><button class="btn_style">Ajukan Izin</button></a>
+						<a href="permohonan/ajukan-ITPMB?id={{$idlogin}}"><button class="btn_style">Ajukan Izin</button></a>
 					</div>					
 				</div>
 				<div class="col-md-4 grid1_of_3">
@@ -132,7 +132,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					  <img src="images/icon3.png" class="img-responsive"/>
 					  <p>STPW adalah bukti pendaftaran prospektus/perjanjian yang diberikan kepada pemberi waralaba dan/atau penerima waralaba</p>
 				     <div class="rd_more1">
-						<a href="permohonan/ajukan-STPW"><button class="btn_style">Ajukan Izin</button></a>
+						<a href="permohonan/ajukan-STPW?id={{$idlogin}}"><button class="btn_style">Ajukan Izin</button></a>
 					</div>	
 				</div>
 			    <div class="clearfix"></div>
