@@ -29,7 +29,7 @@
 					<input type="hidden" name="ktp" value="{{$ktpID->id}}">
 
 				</form>
-					{{$stpw->nomorIzin}} <button>perpanjang</button>
+					{{$stpw->nomorIzin}} <button class="btn btn_style" form="perpanjang">perpanjang</button>
 				@endforeach
 				@foreach($izinITPMB as $itpmb)
 				<form id="perpanjang" method="post" action="/iusp/public/perpanjangITPMB">
