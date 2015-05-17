@@ -14,9 +14,9 @@ class UserProfileController extends Controller {
 		$izinSTPW = database::getIzinSTPWbyId($id);
 		$izinITPMB = database::getIzinITPMBbyId($id);
 		$noKTP = database::getKTPID($id);
-		foreach($noKTP as $ktp)
-			$noNPWP = database::getNPWP($ktp);			
-		endforeach
+		foreach($noKTP as $ktp){
+			$noNPWP = database::getNPWP($ktp);
+		}
 		return view ('user.userProfile', compact('izinITPMB','izinIUTM','izinSTPW','noKTP','noNPWP'));
 	}
 
