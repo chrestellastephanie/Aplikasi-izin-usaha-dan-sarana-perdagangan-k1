@@ -161,9 +161,17 @@ class PermohonanController extends Controller {
 		// $iutm = database::getPermohonanIUTMbyId($id);
 		// $pdf = \PDF::loadView('surat-izin-iutm',compact('iutm'));
         // return $pdf->download("tes.pdf"); //kasih nama sesuai no izinnya -> ntar diganti sama save pdf nya aja
+
 		$permohonan = database::getPermohonanIUTMbyId($id);
-		$pemohon = database::getKTPID($permohonan['direkturPerusahaan']);
-		PermohonanController::sendMail($pemohon['email'], 'accepted', $noSurat);
+		foreach($permohonan as $p){
+			$iduser = $p->direkturPerusahaan;
+		}
+		$noktp = database::getKTPID($id);
+		foreach($noktp as $ktp){
+			$email = $ktp->email;
+		}
+		// $pemohon = database::getKTPID($permohonan['direkturPerusahaan']);
+		PermohonanController::sendMail($email, 'accepted', $noSurat);
 
 		return redirect('admin/permohonan/view/iutm'); // balik ke halaman awal
 	}
@@ -176,8 +184,15 @@ class PermohonanController extends Controller {
 		database::changeStatusSTPW($id,$status, $tgl, $noSurat);
 		
 		$permohonan = database::getPermohonanSTPWbyId($id);
-		$pemohon = database::getKTPID($permohonan['direkturPerusahaan']);
-		PermohonanController::sendMail($pemohon['email'], 'accepted', $noSurat);
+		foreach($permohonan as $p){
+			$iduser = $p->direkturPerusahaan;
+		}
+		$noktp = database::getKTPID($id);
+		foreach($noktp as $ktp){
+			$email = $ktp->email;
+		}
+		// $pemohon = database::getKTPID($permohonan['direkturPerusahaan']);
+		PermohonanController::sendMail($email, 'accepted', $noSurat);
 
 		return redirect('admin/permohonan/view/stpw');
 	}
@@ -190,8 +205,15 @@ class PermohonanController extends Controller {
 		database::changeStatusITPMB($id,$status, $tgl, $noSurat);
 		
 		$permohonan = database::getPermohonanITPMBbyId($id);
-		$pemohon = database::getKTPID($permohonan['direkturPerusahaan']);
-		PermohonanController::sendMail($pemohon['email'], 'accepted', $noSurat);
+		foreach($permohonan as $p){
+			$iduser = $p->direkturPerusahaan;
+		}
+		$noktp = database::getKTPID($id);
+		foreach($noktp as $ktp){
+			$email = $ktp->email;
+		}
+		// $pemohon = database::getKTPID($permohonan['direkturPerusahaan']);
+		PermohonanController::sendMail($email, 'accepted', $noSurat);
 
 		return redirect('admin/permohonan/view/itpmb');
 	}
