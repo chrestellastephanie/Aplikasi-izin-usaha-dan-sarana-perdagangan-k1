@@ -2,6 +2,8 @@
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\database;
+
 
 use Illuminate\Http\Request;
 
