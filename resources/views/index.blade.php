@@ -33,7 +33,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 </head>
 <body>
 	<!-- get id yang login -->
-	<?php $idlogin= $_GET['id']
+	<?php 
+		$idlogin= $_GET['id'];
 		echo $idlogin;
 	?>
 
