@@ -15,7 +15,6 @@ use Barryvdh\DomPDF\Facade;
 use App\Http\Requests\CreatePermohonanIUTMRequest;
 use App\Http\Requests\CreatePermohonanSTPWRequest;
 use App\Http\Requests\CreatePermohonanITPMBRequest;
-use App\Http\Controllers\Redirect;
 
 
 
@@ -219,26 +218,29 @@ class PermohonanController extends Controller {
 	}
 	public static function perpanjangIUTM(){
 		$id = Input::get('id');
+		$ktp = Input::get('ktp');
 		$status = 'accepted';
 		$tgl = Carbon::now();
 		$noSurat = 'ITPMB/'.$tgl->year.'/'.$tgl->month.'/'.$id;
 		database::changeStatusIUTM($id,$status, $tgl, $noSurat);
-		return Redirect::back();
+		return redirect('user-profile/{{$ktp}}?id={{$ktp}}');
 	}
 	public static function perpanjangSTPW(){
 		$id = Input::get('id');
+		$ktp = Input::get('ktp');
 		$status = 'accepted';
 		$tgl = Carbon::now();
 		$noSurat = 'STPW/'.$tgl->year.'/'.$tgl->month.'/'.$id;
 		database::changeStatusSTPW($id,$status, $tgl, $noSurat);
-		return Redirect::back();
+		return redirect('user-profile/{{$ktp}}?id={{$ktp}}');
 	}
 	public static function perpanjangITPMB(){
 		$id = Input::get('id');
+		$ktp = Input::get('ktp');
 		$status = 'accepted';
 		$tgl = Carbon::now();
 		$noSurat = 'ITPMB/'.$tgl->year.'/'.$tgl->month.'/'.$id;
 		database::changeStatusITPMB($id,$status, $tgl, $noSurat);
-		return Redirect::back();
+		return redirect('user-profile/{{$ktp}}?id={{$ktp}}');
 	}
 }
