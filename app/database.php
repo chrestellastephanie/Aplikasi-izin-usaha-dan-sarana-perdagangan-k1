@@ -104,16 +104,19 @@ class database extends Model {
 	public static function getIzinIUTMbyId($id){
 		return DB::table('ppl_iusp_permohonaniutms')
 				->where('direkturPerusahaan','=',$id)
+				->where('status','=','accepted')
 				->get();
 	}
 	public static function getIzinSTPWbyId($id){
 		return DB::table('ppl_iusp_permohonanstpws')
 				->where('direkturPerusahaan','=',$id)
+				->where('status','=','accepted')
 				->get();
 	}
 	public static function getIzinITPMBbyId($id){
 		return DB::table('ppl_iusp_permohonanitpmbs')
 				->where('direkturPerusahaan','=',$id)
+				->where('status','=','accepted')
 				->get();
 	}
 	public static function getKTPID($id){

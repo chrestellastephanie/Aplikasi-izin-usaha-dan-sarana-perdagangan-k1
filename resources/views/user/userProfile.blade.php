@@ -27,7 +27,6 @@
 					<input name="_token" hidden value="{!! csrf_token() !!}" />
 					<input type="hidden" name="id" value="{{$stpw->id}}">	
 					<input type="hidden" name="ktp" value="{{$ktpID->id}}">
-
 				</form>
 					{{$stpw->nomorIzin}} <button class="btn btn_style" form="perpanjang">perpanjang</button>
 				@endforeach
