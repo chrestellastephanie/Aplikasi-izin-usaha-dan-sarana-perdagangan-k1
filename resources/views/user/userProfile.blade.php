@@ -12,13 +12,13 @@
 			<br>No NPWP:
 			<br>Izin yang dimiliki : 
 				@foreach($izinIUTM as $iutm)
-					$iutm->nomorIzin
+					{{$iutm->nomorIzin}}
 				@endforeach
 				@foreach($izinSTPW as $stpw)
-					$stpw->nomorIzin
+					{{$stpw->nomorIzin}}
 				@endforeach
 				@foreach($izinITPMB as $itpmb)
-					$itpmb->nomorIzin
+					{{$itpmb->nomorIzin}}
 				@endforeach
 		</div>
 
