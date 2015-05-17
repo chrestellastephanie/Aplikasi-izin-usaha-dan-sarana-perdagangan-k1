@@ -20,7 +20,7 @@ Route::controllers([
 	'password' => 'Auth\PasswordController',
 ]);
 // user
-Route::get('/','PermohonanController@chooseIzin');
+Route::get('/home','PermohonanController@chooseIzin');
 Route::get('permohonan/ajukan-IUTM-IUPP-IUPPT','PermohonanController@show_IUTM_IUPP_IUPPT');
 Route::get('permohonan/ajukan-STPW','PermohonanController@show_STPW');
 Route::get('permohonan/ajukan-ITPMB','PermohonanController@show_ITPMB');
