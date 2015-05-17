@@ -13,7 +13,9 @@
 			<br><b>email:</b> {{$ktpID->email}}
 			
 			<br>
-			<br>No NPWP: 
+			<br>No NPWP: @foreach($noNPWP as $npwp)
+				{{$npwp->npwpd}}
+			@endforeach
 			<br><b>Izin yang dimiliki :</b> <br>
 				@foreach($izinIUTM as $iutm)
 				<form id="perpanjang" method="post" action="/iusp/public/perpanjangIUTM">
@@ -37,7 +39,7 @@
 					<input name="_token" hidden value="{!! csrf_token() !!}" />
 					<input type="hidden" name="id" value="{{$itpmb->id}}">	
 					<input type="hidden" name="ktp" value="{{$ktpID->id}}">
-					
+
 				</form>
 					{{$itpmb->nomorIzin}} <button class="btn btn_style" form="perpanjang">perpanjang</button>
 				@endforeach
