@@ -1,6 +1,11 @@
 @extends('single-page')
 
 @section('content')
+<!-- get id yang login -->
+	<?php 
+		$idlogin= $_GET['id'];
+		echo $idlogin;
+	?>
 <div class="container">
 	<h1>Form Permohonan Izin Usaha STPW</h1>
 	<hr/>
@@ -15,7 +20,7 @@
 		{!! Form::text('namaPerusahaan',null, ['class' => 'form-control'])!!}
 
 		{!! Form::label('alamatPerusahaan', 'Alamat Perusahaan:')!!}
-		{!! Form::text('alamatPerusahaan',null, ['class' => 'form-control'])!!}
+		{!! Form::text('alamatPerusahaan',null, ['class' => 'form-control', 'value'=>$idlogin])!!}
 
 		{!! Form::label('direkturPerusahaan', 'NIK penanggung jawab:')!!}
 		{!! Form::text('direkturPerusahaan',null, ['class' => 'form-control'])!!}

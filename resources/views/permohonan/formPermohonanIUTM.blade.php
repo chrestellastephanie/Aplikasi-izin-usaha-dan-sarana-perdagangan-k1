@@ -1,6 +1,11 @@
 @extends('single-page')
 
 @section('content')
+<!-- get id yang login -->
+	<?php 
+		$idlogin= $_GET['id'];
+		echo $idlogin;
+	?>
 <div class="container">
 	<h1>Form Permohonan Izin Usaha IUTM/IUPP/IUPPT</h1>
 	<hr/>
@@ -19,7 +24,7 @@
 		{!! Form::text('alamatPerusahaan',null, ['class' => 'form-control'])!!}
 
 		{!! Form::label('direkturPerusahaan', 'NIK penanggung jawab:')!!}
-		{!! Form::text('direkturPerusahaan',null, ['class' => 'form-control'])!!}
+		{!! Form::text('direkturPerusahaan',null, ['class' => 'form-control', 'value'=>$idlogin]])!!}
 
 		{!! Form::label('bentukBadanUsaha', 'Bentuk Badan Usaha:')!!}<br>
 		{!! Form::select('bentukBadanUsaha', [
