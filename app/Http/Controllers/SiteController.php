@@ -20,7 +20,7 @@ class SiteController extends Controller {
 		$iutm = database::getPermohonanIUTMbyId($id);
 		$iduser=Input::get('iduser');
 		$noktp=database::getKTPID($iduser);
-		foreach($noKTP as $ktp){
+		foreach($noktp as $ktp){
 			$noNPWP = database::getNPWP($ktp->nik);
 		}
 		return view ('berkas-iutm',compact('iutm','noNPWP'));
@@ -29,7 +29,7 @@ class SiteController extends Controller {
 		$stpw = database::getPermohonanSTPWbyId($id);
 		$iduser=Input::get('iduser');
 		$noktp=database::getKTPID($iduser);
-		foreach($noKTP as $ktp){
+		foreach($noktp as $ktp){
 			$noNPWP = database::getNPWP($ktp->nik);
 		}
 		return view ('berkas-stpw',compact('stpw','noNPWP'));
@@ -38,7 +38,7 @@ class SiteController extends Controller {
 		$itpmb = database::getPermohonanITPMBbyId($id);
 		$iduser=Input::get('iduser');
 		$noktp=database::getKTPID($iduser);
-		foreach($noKTP as $ktp){
+		foreach($noktp as $ktp){
 			$noNPWP = database::getNPWP($ktp->nik);
 		}
 		return view ('berkas-itpmb',compact('itpmb','noNPWP'));
