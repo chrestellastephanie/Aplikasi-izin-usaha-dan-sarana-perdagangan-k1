@@ -13,7 +13,8 @@ class UserProfileController extends Controller {
 		$izinIUTM = database::getIzinIUTMbyId($id);
 		$izinSTPW = database::getIzinSTPWbyId($id);
 		$izinITPMB = database::getIzinITPMBbyId($id);
-		return view ('user.userProfile', compact('izinITPMB','izinIUTM','izinSTPW'));
+		$noKTP = database::getKTPID($id);
+		return view ('user.userProfile', compact('izinITPMB','izinIUTM','izinSTPW','noKTP'));
 	}
 
 }

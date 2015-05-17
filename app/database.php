@@ -116,4 +116,9 @@ class database extends Model {
 				->where('direkturPerusahaan','=',$id)
 				->get();
 	}
+	public static function getKTPID($id){
+		return DB::table('ppl_dukcapil_ktp')
+				->where('id','=',$id)
+				->get();
+	}
 }
