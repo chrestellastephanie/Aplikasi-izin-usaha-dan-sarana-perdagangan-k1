@@ -36,7 +36,6 @@ class PermohonanController extends Controller {
 
 	public function chooseIzin()
 	{
-
 		return view('permohonan.pilihIzin');
 	}
 	public function show_IUTM_IUPP_IUPPT(){
