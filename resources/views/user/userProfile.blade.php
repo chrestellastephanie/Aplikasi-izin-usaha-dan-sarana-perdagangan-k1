@@ -23,10 +23,18 @@
 					{{$iutm->nomorIzin}} <button class="btn btn_style" form="perpanjang">perpanjang</button>
 				@endforeach
 				@foreach($izinSTPW as $stpw)
+				<form id="perpanjang" method="post" action="/iusp/public/perpanjangSTPW">
+					<input name="_token" hidden value="{!! csrf_token() !!}" />
+					<input type="hidden" name="id" value="{{$stpw->id}}">	
+				</form>
 					{{$stpw->nomorIzin}} <button>perpanjang</button>
 				@endforeach
 				@foreach($izinITPMB as $itpmb)
-					{{$itpmb->nomorIzin}} <button>perpanjang</button>
+				<form id="perpanjang" method="post" action="/iusp/public/perpanjangITPMB">
+					<input name="_token" hidden value="{!! csrf_token() !!}" />
+					<input type="hidden" name="id" value="{{$itpmb->id}}">	
+				</form>
+					{{$itpmb->nomorIzin}} <button class="btn btn_style" form="perpanjang">perpanjang</button>
 				@endforeach
 		</div>
 
