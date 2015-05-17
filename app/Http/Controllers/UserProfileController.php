@@ -7,8 +7,11 @@ use Illuminate\Http\Request;
 
 class UserProfileController extends Controller {
 
-	public static function index(){
-		return view ('user.userProfile');
+	public static function index($id){
+		$izinIUTM = database::getIzinIUTMbyId($id);
+		$izinSTPW = database::getIzinSTPWbyId($id);
+		$izinITPMB = database::getIzinITPMBbyId($id);
+		return view ('user.userProfile', compact('izinITPMB','izinIUTM','izinSTPW'));
 	}
 
 }

@@ -29,7 +29,7 @@ Route::post('permohonan/IUTMSuccess','PermohonanController@ajukan_IUTM_IUPP_IUPP
 Route::post('permohonan/STPWSuccess','PermohonanController@ajukan_STPW');
 Route::post('permohonan/ITPMBSuccess','PermohonanController@ajukan_ITPMB');
 
-Route::get('user-profile','UserProfileController@index');
+Route::get('user-profile/{id}','UserProfileController@index');
 
 //login user
 Route::get('login','LoginController@UserLogin');
