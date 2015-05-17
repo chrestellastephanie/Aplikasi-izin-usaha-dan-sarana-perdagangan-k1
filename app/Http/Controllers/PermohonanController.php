@@ -153,6 +153,7 @@ class PermohonanController extends Controller {
 
 	public function setujuIUTM(){
 		$id = Input::get('id');
+		$status = 'accepted';
 		$tgl = Carbon::now();
 		$noSurat = 'IUTM-IUPP-IUPPT/'.$tgl->year.'/'.$tgl->month.'/'.$id;
 		database::changeStatusIUTM($id,$status, $tgl, $noSurat);
@@ -204,7 +205,7 @@ class PermohonanController extends Controller {
 		
 		$permohonan = database::getPermohonanIUTMbyId($id);
 		$pemohon = database::getKTPID($permohonan['direkturPerusahaan']);
-		PermohonanController::sendMail($pemohon['email'], 'rejected', $noSurat);
+		PermohonanController::sendMail($pemohon['email'], $status, $noSurat);
 
 		return redirect('admin/permohonan/view/iutm');
 	}
@@ -217,7 +218,7 @@ class PermohonanController extends Controller {
 		
 		$permohonan = database::getPermohonanSTPWbyId($id);
 		$pemohon = database::getKTPID($permohonan['direkturPerusahaan']);
-		PermohonanController::sendMail($pemohon['email'], 'rejected', $noSurat);
+		PermohonanController::sendMail($pemohon['email'], $status, $noSurat);
 
 		return redirect('admin/permohonan/view/stpw');
 	}
@@ -230,7 +231,7 @@ class PermohonanController extends Controller {
 		
 		$permohonan = database::getPermohonanITPMBbyId($id);
 		$pemohon = database::getKTPID($permohonan['direkturPerusahaan']);
-		PermohonanController::sendMail($pemohon['email'], 'rejected', $noSurat);
+		PermohonanController::sendMail($pemohon['email'], $status, $noSurat);
 
 		return redirect('admin/permohonan/view/itpmb');
 	}
