@@ -59,8 +59,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		      <ul class="menu nav navbar-nav ">
 		        <li class="active"><a href="/">home</a></li>
 		         <li><a href="user-profile/{{$idlogin}}?id={{$idlogin}}">user profile</a></li>
-		         <li><a href="#">about us</a></li>
-		        <li><a href="#">portal application</a></li>
                   <li><a href="/">Logout</a></li>
                   <script type="text/javascript">
                       $('#logoutLink').click(function(e) {
