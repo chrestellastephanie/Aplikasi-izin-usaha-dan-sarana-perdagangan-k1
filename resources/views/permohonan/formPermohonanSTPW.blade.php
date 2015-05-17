@@ -4,7 +4,6 @@
 <!-- get id yang login -->
 	<?php 
 		$idlogin= $_GET['id'];
-		echo $idlogin;
 	?>
 <div class="container">
 	<h1>Form Permohonan Izin Usaha STPW</h1>
